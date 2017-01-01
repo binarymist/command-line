@@ -18,10 +18,9 @@
 
 On a debian based system, install `macchanger` as root with:  
 `apt-get install macchanger`  
-
 Common usage example:
 ```bash
-# Run commands as root
+# Run commands as root.
 # Syntax:
 ifconfig <interface> down
 macchanger -r <interface>
@@ -32,9 +31,8 @@ ifconfig <interface> up
 
 On a debian based system, install `nethogs` as root with:  
 `apt-get install nethogs`  
-Run with: `sudo`.
-   
 ```bash
+# Run commands as root.
 # Syntax:
 nethogs [options] [device(s)]
 # Example:
