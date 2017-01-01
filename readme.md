@@ -1,5 +1,7 @@
 ## Contents
 
+* [Macchanger](#macchanger)
+* [Nethogs](#nethogs)
 * [SSH](#ssh)
   * [Authentication Agent Forwarding](#ssh-authentication-agent-forwarding)
   * [Sshuttle](#ssh-sshuttle)
@@ -12,7 +14,33 @@
 
 
 
+## [Macchanger](https://github.com/alobbs/macchanger)
 
+On a debian based system, install `macchanger` as root with:  
+`apt-get install macchanger`  
+
+Common usage example:
+```bash
+# Run commands as root
+# Syntax:
+ifconfig <interface> down
+macchanger -r <interface>
+ifconfig <interface> up
+```
+
+## [Nethogs](https://github.com/raboof/nethogs)
+
+On a debian based system, install `nethogs` as root with:  
+`apt-get install nethogs`  
+Run with: `sudo`.
+   
+```bash
+# Syntax:
+nethogs [options] [device(s)]
+# Example:
+nethogs eth0
+```
+Some usage details [here](http://www.cyberciti.biz/faq/linux-find-out-what-process-is-using-bandwidth/)
 
 ## SSH
 
