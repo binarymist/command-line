@@ -4,7 +4,7 @@
   * [Socks](#ssh-socks)
   * [Tunnel](#ssh-tunnel)
 * [Books](#books)
-* [Awesome Lists](#awsome-lists)
+* [Awesome Lists](#awesome-lists)
 * [Other Lists](#other-lists)
 
 
@@ -22,7 +22,7 @@ ssh -D9090 <proxy-user-account>@<proxy>
 * [https://anapnea.net/tut_unix_ssh.php](https://anapnea.net/tut_unix_ssh.php)
 * [http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/](http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/)
 
-### Tunnel
+### Tunnel <a id="ssh-tunnel"/>
 To forward (or tunnel) from one machine to another, you need to use the -L argument for Local port forwarding.  
 `localhost` is the optional default `hostname`.  
 
@@ -53,7 +53,7 @@ Details on tunneling RDP on my [blog post](https://blog.binarymist.net/2010/08/2
 
 * []() - .
 
-### License
+## License
 
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
