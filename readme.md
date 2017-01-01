@@ -23,8 +23,9 @@ Example: laptop -> mail-server (through router) -> file-server
 
 You need to be aware that using agent forwarding opens an attack vector for  
 "_users with the ability to bypass file permissions on the remote host (for the agent's Unix-domain socket) can access the local agent through the forwarded connection. An attacker cannot obtain key material from the agent, however they can perform operations on the keys that enable them to authenticate using the identities loaded into the agent._"  
-> Man page  
-Example of copying a file from file-server (through router) to mail-server to your laptop.
+> SSH man page
+
+Example of copying a file from file-server (through router), to mail-server, to your laptop.
 
 ```bash
 # In one terminal:
