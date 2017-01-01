@@ -1,5 +1,6 @@
 ## Contents
 
+* [Fdisk](#fdisk)
 * [Lshw](#lshw)
 * [Macchanger](#macchanger)
 * [Nethogs](#nethogs)
@@ -12,11 +13,19 @@
 * [Awesome Lists](#awesome-lists)
 * [Other Lists](#other-lists)
 
+## [Fdisk]()
+
+Shows partition information.
+```bash
+# Run command as root.
+fdisk -l
+```
+
 ## [Lshw: HardWare LiSter for Linux](https://github.com/lyonel/lshw)
 
 Provides detailed information on the hardware configuration of the machine.
 ```bash
-# Run commands as root.
+# Run command as root.
 # Shows disk info.
 # Example:
 lshw -C disk
@@ -43,7 +52,7 @@ ifconfig <interface> up
 On a debian based system, install `nethogs` as root with:  
 `apt-get install nethogs`  
 ```bash
-# Run commands as root.
+# Run command as root.
 # Syntax:
 nethogs [options] [device(s)]
 # Example:
