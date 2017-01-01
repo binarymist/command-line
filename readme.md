@@ -14,7 +14,7 @@
 
 ## SSH
 
-### Socks {#ssh-socks}
+### Socks <a id="ssh-socks"/>
 Setup socks proxy through `<proxy>`
 ```bash
 ssh -D9090 <proxy-user-account>@<proxy>
