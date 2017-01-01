@@ -17,7 +17,7 @@
 Provides detailed information on the hardware configuration of the machine.
 ```bash
 # Run commands as root.
-# shows disk info
+# Shows disk info.
 # Example:
 lshw -C disk
 ```
