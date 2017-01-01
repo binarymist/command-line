@@ -1,6 +1,7 @@
 ## Contents
 
 * [SSH](#ssh)
+  * [Sshuttle](#ssh-sshuttle)
   * [Socks](#ssh-socks)
   * [Tunnel](#ssh-tunnel)
 * [Books](#books)
@@ -14,12 +15,31 @@
 
 ## SSH
 
+### Sshuttle <a id="ssh-sshuttle"/>
+
+`sshuttle` combines an `ssh` tunnel with a system wide proxy, sometimes called a poor mans VPN.
+
+On a debian based system, install `sshuttle` as root with:  
+`apt-get install sshuttle`  
+For a later version:  
+`git clone git://github.com/apenwarr/sshuttle`  
+After the server you intend to tunnel though has `sshd` running, from your local machine, run:  
+```bash
+# Syntax:
+sshuttle --dns -vvr <proxy-user-account>@<proxy> 0/0
+# Example:
+sshuttle --dns -vvr kim@myproxy.net 0/0
+```
+Now all network traffic is `ssh` proxied through the `proxy` server, including DNS.
+
+Test with: [http://ifconfig.me/](http://ifconfig.me/)  
+Test if there is any leakage by visiting the DNS leak test [Web site](https://www.dnsleaktest.com/) and clicking on the Standard test button, you can also visit the IP/DNS Detect [site](http://ipleak.net/).
+
 ### Socks <a id="ssh-socks"/>
 Setup socks proxy through `<proxy>`
 ```bash
 ssh -D9090 <proxy-user-account>@<proxy>
 ```
-* [https://anapnea.net/tut_unix_ssh.php](https://anapnea.net/tut_unix_ssh.php)
 * [http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/](http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/)
 
 ### Tunnel <a id="ssh-tunnel"/>
@@ -27,7 +47,7 @@ To forward (or tunnel) from one machine to another, you need to use the -L argum
 `localhost` is the optional default `hostname`.  
 
 ```bash
-# Syntax
+# Syntax:
 ssh -L [hostname:]<localport>:<localhost-name-on-remote-host>:<remoteport> <proxy-user-account>@<proxy>
 # Example:
 # Bind default proxy port (9090) to Tor port (9050) on proxy.net
@@ -42,6 +62,11 @@ You can also do remote port forwarding by swapping the `-L` for `-R`, the rest o
 
 Details on tunneling RDP on my [blog post](https://blog.binarymist.net/2010/08/26/installation-of-ssh-on-64bit-windows-7-to-tunnel-rdp/).
 
+You can also combine the tunnel with the socks proxy:
+```bash
+# Syntax:
+ssh -D9090 -L 127.0.0.1:9090:127.0.0.1:9050 <proxy-user-account>@<proxy>
+```
 
 ## Books
 
