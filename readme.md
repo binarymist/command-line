@@ -21,7 +21,7 @@ Provides detailed information on the hardware configuration of the machine.
 # Example:
 lshw -C disk
 ```
-`-C`_`class`_ is an alias for `-class`_'class`_  
+`-C`_`class`_ is an alias for `-class`_`class`_  
 You can check all the _class_ types at the [home page](http://www.ezix.org/project/wiki/HardwareLiSter)  
 The [man page](https://linux.die.net/man/1/lshw) is quite useful also.
 
