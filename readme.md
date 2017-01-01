@@ -1,6 +1,7 @@
 ## Contents
 
 * [SSH](#ssh)
+  * [Authentication Agent Forwarding](#ssh-authentication-agent-forwarding)
   * [Sshuttle](#ssh-sshuttle)
   * [Socks](#ssh-socks)
   * [Tunnel](#ssh-tunnel)
@@ -14,6 +15,34 @@
 
 
 ## SSH
+
+### Authentication Agent Forwarding <a id="ssh-authentication-agent-forwarding"/>
+
+Using the `-A` argument allows you to forward the authentication agent connection. Essentially this allows you to hop (or pivot) from one ssh server to another.  
+Example: laptop -> mail-server (through router) -> file-server  
+
+You need to be aware that using agent forwarding opens an attack vector for  
+"_users with the ability to bypass file permissions on the remote host (for the agent's Unix-domain socket) can access the local agent through the forwarded connection. An attacker cannot obtain key material from the agent, however they can perform operations on the keys that enable them to authenticate using the identities loaded into the agent._"  
+> Man page  
+Example of copying a file from file-server (through router) to mail-server to your laptop.
+
+```bash
+# In one terminal:
+#    Find file first:
+#    SSH to mail-server from WAN.
+ssh <your-mail-server-account>@<router-wan-interface> -A -p <non-default-port>
+#    From mail-server SSH to file-server.
+ssh <your-file-server-account>@<file-server> -p <non-default-port>
+#    Now you are on the file-server, locate the file to copy.
+         
+# In 2nd terminal: Copy from file-server to mail-server:
+ssh <your-mail-server-account>@<router-wan-interface> -A -p <non-default-port>
+scp -P <non-default-port> <your-file-server-account>@<file-server>:/file-server/path/filetocopy.txt ~/
+         
+# In 3rd terminal: Copy from mail-server to laptop:
+scp -P <non-default-port> <your-mail-server-account>@<router-wan-interface>:/home/<your-mail-server-account>/filetocopy.txt /home/you/
+```
+Multi-hop [example](http://sshmenu.sourceforge.net/articles/transparent-mulithop.html).
 
 ### [Sshuttle](https://github.com/apenwarr/sshuttle/tree/master) <a id="ssh-sshuttle"/>
 
