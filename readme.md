@@ -17,7 +17,7 @@
 
 ### Sshuttle <a id="ssh-sshuttle"/>
 
-`sshuttle` combines an `ssh` tunnel with a system wide proxy, sometimes called a poor mans VPN.
+`sshuttle` combines an `ssh` tunnel with a system wide proxy, sometimes called a poor mans
 
 On a debian based system, install `sshuttle` as root with:  
 `apt-get install sshuttle`  
@@ -34,6 +34,13 @@ Now all network traffic is `ssh` proxied through the `proxy` server, including D
 
 Test with: [http://ifconfig.me/](http://ifconfig.me/)  
 Test if there is any leakage by visiting the DNS leak test [Web site](https://www.dnsleaktest.com/) and clicking on the Standard test button, you can also visit the IP/DNS Detect [site](http://ipleak.net/).
+
+`-v` is just additional verbosity.  
+`-r`, `--remote`_`=[username@]sshserver[:port]`_ _is the remote hostname and optional username and ssh port number to use for connecting to the remote server._
+`0/0` is short for `0.0.0.0/0`, which represents the subnets to route over the `ssh` tunnel. The usage of `0/0` routes all the traffic except DNS requests to the remote server.  
+`--dns` will also proxy your DNS queries through the server you are tunneled to.
+
+
 
 ### Socks <a id="ssh-socks"/>
 Setup socks proxy through `<proxy>`
@@ -62,7 +69,7 @@ You can also do remote port forwarding by swapping the `-L` for `-R`, the rest o
 
 Details on tunneling RDP on my [blog post](https://blog.binarymist.net/2010/08/26/installation-of-ssh-on-64bit-windows-7-to-tunnel-rdp/).
 
-You can also combine the tunnel with the socks proxy:
+You can also **combine tunnel with socks proxy**:
 ```bash
 # Syntax:
 ssh -D9090 -L 127.0.0.1:9090:127.0.0.1:9050 <proxy-user-account>@<proxy>
