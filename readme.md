@@ -1,5 +1,6 @@
 ## Contents
 
+* [Lshw](#lshw)
 * [Macchanger](#macchanger)
 * [Nethogs](#nethogs)
 * [SSH](#ssh)
@@ -11,8 +12,18 @@
 * [Awesome Lists](#awesome-lists)
 * [Other Lists](#other-lists)
 
+## [Lshw: HardWare LiSter for Linux](https://github.com/lyonel/lshw)
 
-
+Provides detailed information on the hardware configuration of the machine.
+```bash
+# Run commands as root.
+# shows disk info
+# Example:
+lshw -C disk
+```
+`-C`_`class`_ is an alias for `-class`_'class`_  
+You can check all the _class_ types at the [home page](http://www.ezix.org/project/wiki/HardwareLiSter)  
+The [man page](https://linux.die.net/man/1/lshw) is quite useful also.
 
 ## [Macchanger](https://github.com/alobbs/macchanger)
 
