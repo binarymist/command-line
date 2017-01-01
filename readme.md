@@ -40,7 +40,7 @@ From there, if Tor is listening on port `9050` of `proxy.net` and you set your b
 
 You can also do remote port forwarding by swapping the `-L` for `-R`, the rest of the command syntax stays the same. What this allows us to do is open a tunnel from a remote machine to our local machine. Further details can be seen [here](http://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html).
 
-
+Details on tunneling RDP on my (blog post](https://blog.binarymist.net/2010/08/26/installation-of-ssh-on-64bit-windows-7-to-tunnel-rdp/).
 
 
 ## Books
