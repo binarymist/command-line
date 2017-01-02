@@ -22,7 +22,7 @@ Shows partition information.
 fdisk -l
 ```
 
-## [Lshw: HardWare LiSter for Linux](https://github.com/lyonel/lshw)
+## [Lshw: HardWare LiSter for Linux](https://github.com/lyonel/lshw) <a id="lshw-hardware-lister-for-linux"/>
 
 Provides detailed information on the hardware configuration of the machine.
 ```bash
@@ -61,14 +61,14 @@ nethogs eth0
 ```
 Some usage details [here](http://www.cyberciti.biz/faq/linux-find-out-what-process-is-using-bandwidth/)
 
-## Scp: Secure copy
+## Scp: Secure copy <a id="scp-secure-copy"/>
 
 `scp` uses `ssh` to copy.
 
-Copy all files within a given directory from your local machine to a given directory on a remote host.  
 `-p` preserves modification times, access times, and modes from the original file.  
 `-r` is for recursion.  
-`-P` Specify for non-default port.
+`-P` Specify for non-default port.  
+Copy all files within a given directory from your local machine to a given directory on a remote host.
 ```bash
 # Syntax:
 scp -p -r -P <non-default-port> <given-directory>/* <your-file-server-account>@<file-server>:/file-server/path/<given-directory>/
