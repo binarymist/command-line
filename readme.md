@@ -1,7 +1,7 @@
 ## Contents
 
 * [Fdisk](#fdisk)
-* [Lshw](#lshw)
+* [Lshw](#lshw-hardware-lister-for-linux)
 * [Macchanger](#macchanger)
 * [Nethogs](#nethogs)
 * [SSH](#ssh)
@@ -9,7 +9,7 @@
   * [Sshuttle](#ssh-sshuttle)
   * [Socks](#ssh-socks)
   * [Tunnel](#ssh-tunnel)
-* [Scp](#scp)
+* [Scp](#scp-secure-copy)
 * [Books](#books)
 * [Awesome Lists](#awesome-lists)
 * [Other Lists](#other-lists)
