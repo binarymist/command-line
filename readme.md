@@ -57,14 +57,17 @@ _"[Stream copy](https://libav.org/avconv.html#Stream-copy) is a mode selected by
 avconv -i in.mkv -ss 00:23:08 -t 00:00:06.5 -vcodec copy -acodec copy -scodec mov_text cut.mp4
 ```
 Joining clips:  
-The `-qscale n` argument (where `n` is a number between 1 (highest quality) and 31 (lowest quality)) allows for variable bitrates but with a constsant quality.  
-`-f` _"[Force](https://libav.org/avconv.html#Main-options) input or output file format.  
+The `-qscale n` argument (where `n` is a number between 1 (highest quality) and 31 (lowest quality)) allows for variable bitrates but with a constant quality.  
+`-f` [Force](https://libav.org/avconv.html#Main-options) input or output file format.  
 `-strict` specifies how strict the standards should be followed. Addition documentation around the arguments to be used can be found [here](https://libav.org/avconv.html#Codec-AVOptions).
 ```bash
 # Example:
-   avconv -i clip.mp4 -qscale 3 out.mpeg
-   avconv -i clip1.mp4 -qscale 3 out1.mpeg
-   cat out.mpeg out1.mpeg | avconv -f mpeg -i - -vcodec mpeg4 -qscale 3 -strict experimental outcombined.mp4
+# Create first clip:
+avconv -i clip.mp4 -qscale 3 out.mpeg
+# Craete second clip:
+avconv -i clip1.mp4 -qscale 3 out1.mpeg
+# Create a third clip using previous two clips as input:
+cat out.mpeg out1.mpeg | avconv -f mpeg -i - -vcodec mpeg4 -qscale 3 -strict experimental outcombined.mp4
 ```
 Useful resources:  
 * [http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html](http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html)
