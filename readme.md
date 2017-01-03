@@ -22,12 +22,11 @@ The `avconv` audio and video encoder is contained within the libav-tools package
 
 ### Screen Recording <a id="screen-recording"/>
 
-`-f` _"[Force](https://libav.org/avconv.html#Main-options) input or output file format. The format is normally autodetected for input files and guessed from file extension for output files."_ `x11grab` is the desktop format.
-`-s` specifies the width and height of the recorded area.
-`-r` is the frame rate.
-`-i` specifies the name of the input file, or in the below case, the `0.0` is display.screen number of your X11 server. This can work in conjunction with the `-f`. `0,0` is the x and y offset for grabbing. 
+`-f` _"[Force](https://libav.org/avconv.html#Main-options) input or output file format. The format is normally autodetected for input files and guessed from file extension for output files."_ `x11grab` is the desktop format.  
+`-s` specifies the width and height of the recorded area.  
+`-r` is the frame rate.  
+`-i` specifies the name of the input file, or in the below case, the `0.0` is display.screen number of your X11 server. This can work in conjunction with the `-f`. `0,0` is the x and y offset for grabbing.  
 `nameOfFile.mov` is the name of the output file. `mov` is the quicktime format.
-
 ```bash
 avconv -f x11grab -s hd1080 -r 10 -i :0.0+0,0 nameOfFile.mov
 ```
