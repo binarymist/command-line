@@ -1,6 +1,8 @@
 ## Contents
 
 * [Audio, Video](#audio-video)
+  * [Modify Command Prompt](#audio-video-modify-command-prompt)
+  * [Manipulating Movies](#audio-video-manipulating-movies)
   * [Screen Recording](#screen-recording)
   * [Croping Screen Capture](#audio-video-croping-screen-capture)
 * [Fdisk](#fdisk)
@@ -19,7 +21,54 @@
 
 ## Audio, Video (A/V) <a id="audio-video"/>
 
-The `avconv` audio and video encoder is contained within the libav-tools package.
+The `avconv` audio and video encoder is contained within the libav-tools package. Make sure it is installed before you use it. In Debian based distros, a simple `apt-get install libav-tools` will do.
+
+### Modify Command Prompt <a id="audio-video-modify-command-prompt"/>
+
+A useful temporary change to make when screen recording for the masses is to anonymise your command prompt.  
+Change command prompt from `<your-account>@<your-host>:/dir1/dir2/etc`  
+to `root:etc#`  
+run this command:
+```bash
+PS1='\e[1;31m\u:\e[m\e[1;32m\w\e[m\$ '
+```
+Changing the font size of the terminal to 18 usually works well for viewers.  
+Useful resources:  
+* [http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/](http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/)
+* [http://askubuntu.com/questions/145618/how-can-i-shorten-my-command-line-bash-prompt](http://askubuntu.com/questions/145618/how-can-i-shorten-my-command-line-bash-prompt)
+
+### Manipulating Movies <a id="audio-video-manipulating-movies"/>
+
+`-i` specifies the input files.  
+`-ss` Start extracting from a certain point in time, the argument should be in the `hh:mm:ss[.xxx]` format.  
+`-t` specifies the lenght of time to extract.  
+`-vcodec` specifies which video codec to use for the output.
+
+For non subtitled:
+```bash
+# Example:
+avconv -i Mr.Robot.S01E03.720p.HDTV.x264-IMMERSE.mkv -ss 00:23:08 -t 00:00:15 -vcodec libx264 cut.mkv
+```
+
+For subtitled:  
+_"[Stream copy](https://libav.org/avconv.html#Stream-copy) is a mode selected by supplying the `copy` parameter to the `-codec` option. It makes `avconv` omit the decoding and encoding step for the specified stream"_.
+```bash
+# Example:
+avconv -i in.mkv -ss 00:23:08 -t 00:00:06.5 -vcodec copy -acodec copy -scodec mov_text cut.mp4
+```
+Joining clips:  
+The `-qscale n` argument (where `n` is a number between 1 (highest quality) and 31 (lowest quality)) allows for variable bitrates but with a constsant quality.  
+`-f` _"[Force](https://libav.org/avconv.html#Main-options) input or output file format.  
+`-strict` specifies how strict the standards should be followed. Addition documentation around the arguments to be used can be found [here](https://libav.org/avconv.html#Codec-AVOptions).
+```bash
+# Example:
+   avconv -i clip.mp4 -qscale 3 out.mpeg
+   avconv -i clip1.mp4 -qscale 3 out1.mpeg
+   cat out.mpeg out1.mpeg | avconv -f mpeg -i - -vcodec mpeg4 -qscale 3 -strict experimental outcombined.mp4
+```
+Useful resources:  
+* [http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html](http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html)
+* [https://libav.org/avconv.html#Tips](https://libav.org/avconv.html#Tips)
 
 ### Screen Recording <a id="screen-recording"/>
 
@@ -42,7 +91,7 @@ Screen recording can also be [done with VLC](http://www.howtogeek.com/120202/how
 
 ### Croping Screen Capture <a id="audio-video-croping-screen-capture"/>
 
-`-vf` specifies `<width>`:`<height>`:`<x-offset>`:`<y-offset>` of the source video to use in the output.
+`-vf` specifies the crop of `<width>`:`<height>`:`<x-offset>`:`<y-offset>` of the source video to use in the output.
 ```bash
 # Example:
 avconv -i input.mov -vf crop=1920:910:0:122 output.mov
