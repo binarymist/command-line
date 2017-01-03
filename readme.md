@@ -27,9 +27,14 @@ The `avconv` audio and video encoder is contained within the libav-tools package
 
 A useful temporary change to make when screen recording for the masses is to anonymise your command prompt.  
 Change command prompt from `<your-account>@<your-host>:/dir1/dir2/etc`  
-to `root:etc#`  
+to `root:/etc#`  
+non-printable bytes [need to be contained](https://askubuntu.com/questions/24358/how-do-i-get-long-command-lines-to-wrap-to-the-next-line#answer-24422) within `\[` and `\]` escapes.  
 run this command:
 ```bash
+# Syntax
+#          start colour scheme   colour   dislay current user name   stop colour scheme          start colour scheme   colour   base dir   stop colour scheme        non root or root user
+PS1=' \[   \e[                   1;31m    \u:                        \e[m                 \]\[   \e[                   1;32m    \w         \e[m                 \]   \$ '
+# Example:
 PS1='\[\e[1;31m\u:\e[m\]\[\e[1;32m\w\e[m\]\$ '
 # Technically you can do away with the first "\]" since there is a "\[" starting directly after it.
 ```
