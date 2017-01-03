@@ -29,6 +29,7 @@ The `avconv` audio and video encoder is contained within the libav-tools package
 `-i` specifies the name of the input file, or in the below case, the `0.0` is display.screen number of your X11 server. This can work in conjunction with the `-f`. `0,0` is the x and y offset for grabbing.  
 `nameOfFile.mov` is the name of the output file. `mov` is the quicktime format.
 ```bash
+# Example:
 avconv -f x11grab -s hd1080 -r 10 -i :0.0+0,0 nameOfFile.mov
 ```
 Useful resources:  
@@ -41,8 +42,9 @@ Screen recording can also be [done with VLC](http://www.howtogeek.com/120202/how
 
 ### Croping Screen Capture <a id="audio-video-croping-screen-capture"/>
 
-`-vf` specifies <width>:<height>:<x-offset>:<y-offset> of the source video to use in the output.
+`-vf` specifies `<width>`:`<height>`:`<x-offset>`:`<y-offset>` of the source video to use in the output.
 ```bash
+# Example:
 avconv -i input.mov -vf crop=1920:910:0:122 output.mov
 ```
 Useful resource:  
