@@ -1,5 +1,7 @@
 ## Contents
 
+* [Audio, Video](#audio-video)
+  * [Screen Recording](#screen-recording)
 * [Fdisk](#fdisk)
 * [Lshw](#lshw-hardware-lister-for-linux)
 * [Macchanger](#macchanger)
@@ -13,6 +15,29 @@
 * [Books](#books)
 * [Awesome Lists](#awesome-lists)
 * [Other Lists](#other-lists)
+
+## Audio, Video (A/V) <a id="audio-video"/>
+
+The `avconv` audio and video encoder is contained within the libav-tools package.
+
+### Screen Recording <a id="screen-recording"/>
+
+`-f` _"[Force](https://libav.org/avconv.html#Main-options) input or output file format. The format is normally autodetected for input files and guessed from file extension for output files."_ `x11grab` is the desktop format.
+`-s` specifies the width and height of the recorded area.
+`-r` is the frame rate.
+`-i` specifies the name of the input file, or in the below case, the `0.0` is display.screen number of your X11 server. This can work in conjunction with the `-f`. `0,0` is the x and y offset for grabbing. 
+`nameOfFile.mov` is the name of the output file. `mov` is the quicktime format.
+
+```bash
+avconv -f x11grab -s hd1080 -r 10 -i :0.0+0,0 nameOfFile.mov
+```
+Useful resources:  
+* [http://www.penguinproducer.com/Blog/2012/06/command-for-recording-desktop/](http://www.penguinproducer.com/Blog/2012/06/command-for-recording-desktop/)
+* [http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_avconv](http://wiki.oz9aec.net/index.php/High_quality_screen_capture_with_avconv)
+* [http://unix.stackexchange.com/questions/73622/how-to-get-near-perfect-screen-recording-quality](http://unix.stackexchange.com/questions/73622/how-to-get-near-perfect-screen-recording-quality)
+* [https://libav.org/avconv.html](https://libav.org/avconv.html)
+
+Screen recording can also be [done with VLC](http://www.howtogeek.com/120202/how-to-record-your-desktop-to-a-file-or-stream-it-over-the-internet-with-vlc/), including [setting the position and size](https://forum.videolan.org/viewtopic.php?t=101510) of the grab.
 
 ## [Fdisk]()
 
@@ -141,6 +166,7 @@ Setup socks proxy through `<proxy>`
 ```bash
 ssh -D9090 <proxy-user-account>@<proxy>
 ```
+Useful resource:  
 * [http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/](http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/)
 
 ### Tunnel <a id="ssh-tunnel"/>
