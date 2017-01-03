@@ -30,7 +30,8 @@ Change command prompt from `<your-account>@<your-host>:/dir1/dir2/etc`
 to `root:etc#`  
 run this command:
 ```bash
-PS1='\e[1;31m\u:\e[m\e[1;32m\w\e[m\$ '
+PS1='\[\e[1;31m\u:\e[m\]\[\e[1;32m\w\e[m\]\$ '
+# Technically you can do away with the first "\]" since there is a "\[" starting directly after it.
 ```
 Changing the font size of the terminal to 18 usually works well for viewers.  
 Useful resources:  
