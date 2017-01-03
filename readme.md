@@ -2,6 +2,7 @@
 
 * [Audio, Video](#audio-video)
   * [Screen Recording](#screen-recording)
+  * [Croping Screen Capture](#audio-video-croping-screen-capture)
 * [Fdisk](#fdisk)
 * [Lshw](#lshw-hardware-lister-for-linux)
 * [Macchanger](#macchanger)
@@ -37,6 +38,15 @@ Useful resources:
 * [https://libav.org/avconv.html](https://libav.org/avconv.html)
 
 Screen recording can also be [done with VLC](http://www.howtogeek.com/120202/how-to-record-your-desktop-to-a-file-or-stream-it-over-the-internet-with-vlc/), including [setting the position and size](https://forum.videolan.org/viewtopic.php?t=101510) of the grab.
+
+### Croping Screen Capture <a id="audio-video-croping-screen-capture"/>
+
+`-vf` specifies <width>:<height>:<x-offset>:<y-offset> of the source video to use in the output.
+```bash
+avconv -i input.mov -vf crop=1920:910:0:122 output.mov
+```
+Useful resource:  
+* [http://oliversmith.io/technology/2012/12/30/cropping-videos-using-ffmpeg-libav-avconv/](http://oliversmith.io/technology/2012/12/30/cropping-videos-using-ffmpeg-libav-avconv/)
 
 ## [Fdisk]()
 
