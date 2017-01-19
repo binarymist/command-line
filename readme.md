@@ -272,7 +272,7 @@ ssh -D9090 -L 127.0.0.1:9090:127.0.0.1:9050 <proxy-user-account>@<proxy>
 
 ## Other Lists
 
-* []() - .
+* [https://www.blackmoreops.com/2016/12/20/kali-linux-cheat-sheet-for-penetration-testers/](https://www.blackmoreops.com/2016/12/20/kali-linux-cheat-sheet-for-penetration-testers/) - Kali Linux Cheat Sheet for Penetration Testers.
 
 ## License
 
