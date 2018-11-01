@@ -50,6 +50,8 @@ Useful resources:
 `-t` specifies the lenght of time to extract.  
 `-vcodec` specifies which video codec to use for the output.
 
+#### Extracting
+
 For non subtitled:
 ```bash
 # Example:
@@ -62,7 +64,8 @@ _"[Stream copy](https://libav.org/avconv.html#Stream-copy) is a mode selected by
 # Example:
 avconv -i in.mkv -ss 00:23:08 -t 00:00:06.5 -vcodec copy -acodec copy -scodec mov_text cut.mp4
 ```
-Joining clips:  
+#### Concatenating mp4 files:
+
 The `-qscale n` argument (where `n` is a number between 1 (highest quality) and 31 (lowest quality)) allows for variable bitrates but with a constant quality.  
 `-f` [Force](https://libav.org/avconv.html#Main-options) input or output file format.  
 `-strict` specifies how strict the standards should be followed. Addition documentation around the arguments to be used can be found [here](https://libav.org/avconv.html#Codec-AVOptions).
@@ -75,9 +78,30 @@ avconv -i clip1.mp4 -qscale 3 out1.mpeg
 # Create a third clip using previous two clips as input:
 cat out.mpeg out1.mpeg | avconv -f mpeg -i - -vcodec mpeg4 -qscale 3 -strict experimental outcombined.mp4
 ```
-Useful resources:  
+Useful resources:
+
 * [http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html](http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html)
 * [https://libav.org/avconv.html#Tips](https://libav.org/avconv.html#Tips)
+
+#### Concatenating mov files:
+
+Once you have the files you would like to concatenate, create a file (let's call it `files_to_combine`) and add the files you want concatenated to it. The file should like similar to the following:
+
+```
+file ./cut1.mov
+file ./cut2.mov
+file ./cut3.mov
+```
+
+```bash
+# Example:
+ffmpeg -safe 0 -f concat -i files_to_combine -vcodec copy -acodec copy outcombined.mov
+# Will concatenate cut1.mov, cut2.mov and cut3.mov from your current working directory into a file called outcombined.mov in your current working directory.
+```
+
+Useful resources:
+
+* [Combine MOV video files](https://superuser.com/questions/1256223/combine-mov-video-files/1256224)
 
 ### Screen Recording <a id="screen-recording"/>
 
