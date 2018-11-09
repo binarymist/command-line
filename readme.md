@@ -25,6 +25,8 @@ The `avconv` audio and video encoder is contained within the libav-tools package
 
 ### Modify Command Prompt <a id="audio-video-modify-command-prompt"/>
 
+#### For bash
+
 A useful temporary change to make when screen recording for the masses is to anonymise your command prompt.  
 Change command prompt from `<your-account>@<your-host>:/dir1/dir2/etc`  
 to `root:/etc#`  
@@ -38,6 +40,15 @@ PS1=' \[   \e[                   1;31m    \u:                        \e[m       
 PS1='\[\e[1;31m\u:\e[m\]\[\e[1;32m\w\e[m\]\$ '
 # Technically you can do away with the first "\]" since there is a "\[" starting directly after it.
 ```
+#### for ZSH
+
+I've found this works nicely:
+
+```bash
+export PROMPT='%{$fg[cyan]%}%#%{$reset_color%}'
+
+```
+
 Changing the font size of the terminal to 18 usually works well for viewers.  
 Useful resources:  
 * [http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/](http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/)
