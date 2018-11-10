@@ -152,7 +152,14 @@ Useful resource:
 ffmpeg -i input.mov -pix_fmt rgb24 output.gif
 ```
 
-This may create a file that is too large, so you can reduce the frame rate and size of the image as well. You can also set where the image should start from `-ss <start-point>` and the duration `-t <length>` with the following command:
+This may create a file that is too large, so you can reduce the frame rate and size of the image as well. You can also set where the image should start from and the duration, with the following command:
+
+`-ss <start-point>`  
+`-i <input-file>`  
+`-pix_fmt [stream_specifier]`  
+`-r <frame-rate>`. I find that setting this to `2` usually provides as small as posible image size while keeping enough definition for [CLI images](https://user-images.githubusercontent.com/2862029/48294186-aa449600-e4e7-11e8-8c0e-418ff56adc8a.gif).  
+`-s <size-of-image>` 800 wide seems to be fine for git readme files, then setting the width to 900 on the actual `README.md`  
+`-t <length>`  
 
 ```bash
 ffmpeg -ss 00:00:00.000 -i yesbuddy.mov -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif
