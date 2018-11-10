@@ -162,7 +162,7 @@ This may create a file that is too large, so you can reduce the frame rate and s
 `-t <length>`  
 
 ```bash
-ffmpeg -ss 00:00:00.000 -i yesbuddy.mov -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif
+ffmpeg -ss 00:00:00.000 -i input.mov -pix_fmt rgb24 -r 2 -s 800x700 -t 00:00:10.000 output.gif
 ```
 
 ## [Fdisk]()
