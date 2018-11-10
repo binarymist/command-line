@@ -165,6 +165,8 @@ This may create a file that is too large, so you can reduce the frame rate and s
 ffmpeg -ss 00:00:00.000 -i input.mov -pix_fmt rgb24 -r 2 -s 800x700 -t 00:00:10.000 output.gif
 ```
 
+If you want to add the image file to your git wiki or readme, simply navigate to your github repository issues, click "New Issue", drag your image into the "Write" box, and your image will upload, copy the url and add it to your wiki page or readme, you don't need to actually create the issue.
+
 ## [Fdisk]()
 
 Shows partition information.
