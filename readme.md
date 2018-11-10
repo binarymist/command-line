@@ -5,6 +5,7 @@
   * [Manipulating Movies](#audio-video-manipulating-movies)
   * [Screen Recording](#screen-recording)
   * [Croping Screen Capture](#audio-video-croping-screen-capture)
+  * [Video to Gif](#video-to-gif)
 * [Fdisk](#fdisk)
 * [Lshw](#lshw-hardware-lister-for-linux)
 * [Macchanger](#macchanger)
@@ -142,6 +143,20 @@ avconv -i input.mov -vf crop=1920:910:0:122 output.mov
 ```
 Useful resource:  
 * [http://oliversmith.io/technology/2012/12/30/cropping-videos-using-ffmpeg-libav-avconv/](http://oliversmith.io/technology/2012/12/30/cropping-videos-using-ffmpeg-libav-avconv/)
+
+### Video to Gif <a id="video-to-gif"/>
+
+`ffmpeg` works well for this. I often use this technique for converting videos to gifs to add to wikis or git `README`s.
+
+```bash
+ffmpeg -i input.mov -pix_fmt rgb24 output.gif
+```
+
+This may create a file that is too large, so you can reduce the frame rate and size of the image as well. You can also set where the image should start from `-ss <start-point>` and the duration `-t <length>` with the following command:
+
+```bash
+ffmpeg -ss 00:00:00.000 -i yesbuddy.mov -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif
+```
 
 ## [Fdisk]()
 
