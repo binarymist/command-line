@@ -34,7 +34,7 @@ Change command prompt from `<your-account>@<your-host>:/dir1/dir2/etc`
 to `root:/etc#`  
 non-printable bytes [need to be contained](https://askubuntu.com/questions/24358/how-do-i-get-long-command-lines-to-wrap-to-the-next-line#answer-24422) within `\[` and `\]` escapes.  
 run this command:
-```bash
+```shell
 # Syntax
 #          start colour scheme   colour   dislay current user name   stop colour scheme          start colour scheme   colour   base dir   stop colour scheme        non root or root user
 PS1=' \[   \e[                   1;31m    \u:                        \e[m                 \]\[   \e[                   1;32m    \w         \e[m                 \]   \$ '
@@ -46,7 +46,7 @@ PS1='\[\e[1;31m\u:\e[m\]\[\e[1;32m\w\e[m\]\$ '
 
 I've found this works nicely:
 
-```bash
+```shell
 export PROMPT='%{$fg[cyan]%}%#%{$reset_color%}'
 
 ```
@@ -66,14 +66,14 @@ Useful resources:
 #### Extracting
 
 For non subtitled:
-```bash
+```shell
 # Example:
 avconv -i Mr.Robot.S01E03.720p.HDTV.x264-IMMERSE.mkv -ss 00:23:08 -t 00:00:15 -vcodec libx264 cut.mkv
 ```
 
 For subtitled:  
 _"[Stream copy](https://libav.org/avconv.html#Stream-copy) is a mode selected by supplying the `copy` parameter to the `-codec` option. It makes `avconv` omit the decoding and encoding step for the specified stream"_.
-```bash
+```shell
 # Example:
 avconv -i in.mkv -ss 00:23:08 -t 00:00:06.5 -vcodec copy -acodec copy -scodec mov_text cut.mp4
 ```
@@ -82,7 +82,7 @@ avconv -i in.mkv -ss 00:23:08 -t 00:00:06.5 -vcodec copy -acodec copy -scodec mo
 The `-qscale n` argument (where `n` is a number between 1 (highest quality) and 31 (lowest quality)) allows for variable bitrates but with a constant quality.  
 `-f` [Force](https://libav.org/avconv.html#Main-options) input or output file format.  
 `-strict` specifies how strict the standards should be followed. Addition documentation around the arguments to be used can be found [here](https://libav.org/avconv.html#Codec-AVOptions).
-```bash
+```shell
 # Example:
 # Create first clip:
 avconv -i clip.mp4 -qscale 3 out.mpeg
@@ -106,7 +106,7 @@ file ./cut2.mov
 file ./cut3.mov
 ```
 
-```bash
+```shell
 # Example:
 ffmpeg -safe 0 -f concat -i files_to_combine -vcodec copy -acodec copy outcombined.mov
 # Will concatenate cut1.mov, cut2.mov and cut3.mov from your current working directory into a file called outcombined.mov in your current working directory.
@@ -123,7 +123,7 @@ Useful resources:
 `-r` is the frame rate.  
 `-i` specifies the name of the input file, or in the below case, the `0.0` is display.screen number of your X11 server. This can work in conjunction with the `-f`. `0,0` is the x and y offset for grabbing.  
 `nameOfFile.mov` is the name of the output file. `mov` is the quicktime format.
-```bash
+```shell
 # Example:
 avconv -f x11grab -s hd1080 -r 10 -i :0.0+0,0 nameOfFile.mov
 ```
@@ -138,7 +138,7 @@ Screen recording can also be [done with VLC](http://www.howtogeek.com/120202/how
 ### Croping Screen Capture <a id="audio-video-croping-screen-capture"/>
 
 `-vf` specifies the crop of `<width>`:`<height>`:`<x-offset>`:`<y-offset>` of the source video to use in the output.
-```bash
+```shell
 # Example:
 avconv -i input.mov -vf crop=1920:910:0:122 output.mov
 ```
@@ -149,7 +149,7 @@ Useful resource:
 
 `ffmpeg` works well for this. I often use this technique for converting videos to gifs to add to wikis or git `README`s.
 
-```bash
+```shell
 ffmpeg -i input.mov -pix_fmt rgb24 output.gif
 ```
 
@@ -162,7 +162,7 @@ This may create a file that is too large, so you can reduce the frame rate and s
 `-s <size-of-image>` 800 wide seems to be fine for git readme files, then setting the width to 900 on the actual `README.md`  
 `-t <length>`  
 
-```bash
+```shell
 ffmpeg -ss 00:00:00.000 -i input.mov -pix_fmt rgb24 -r 2 -s 800x700 -t 00:00:10.000 output.gif
 ```
 
@@ -179,7 +179,7 @@ ffmpeg -i Track2.wav -codec:a libmp3lame -qscale:a 2 Track2.mp3
 ## Fdisk
 
 Shows partition information.
-```bash
+```shell
 # Run command as root.
 fdisk -l
 ```
@@ -187,7 +187,7 @@ fdisk -l
 ## [Lshw: HardWare LiSter for Linux](https://github.com/lyonel/lshw) <a id="lshw-hardware-lister-for-linux"/>
 
 Provides detailed information on the hardware configuration of the machine.
-```bash
+```shell
 # Run command as root.
 # Shows disk info.
 # Example:
@@ -202,7 +202,7 @@ The [man page](https://linux.die.net/man/1/lshw) is quite useful also.
 On a debian based system, install `macchanger` as root with:  
 `apt-get install macchanger`  
 Common usage example:
-```bash
+```shell
 # Run commands as root.
 # Syntax:
 ifconfig <interface> down
@@ -214,7 +214,7 @@ ifconfig <interface> up
 
 On a debian based system, install `nethogs` as root with:  
 `apt-get install nethogs`  
-```bash
+```shell
 # Run command as root.
 # Syntax:
 nethogs [options] [device(s)]
@@ -232,12 +232,12 @@ Some usage details [here](http://www.cyberciti.biz/faq/linux-find-out-what-proce
 `-P` Specify for non-default port.
 
 Copy all files within a given directory from your local machine to a given directory on a remote host.
-```bash
+```shell
 # Syntax:
 scp -p -r -P <non-default-port> <given-directory>/* <your-file-server-account>@<file-server>:/file-server/path/<given-directory>/
 ```
 Copy a given directory recursivly from remote host to within your current directory. Note the dot at the end of the command.
-```bash
+```shell
 # Syntax:
 scp -p -r -P <non-default-port> <your-file-server-account>@<file-server>:/file-server/path/<given-directory> .
 ```
@@ -282,7 +282,7 @@ On a debian based system, install `sshuttle` as root with:
 For a later version:  
 `git clone git://github.com/apenwarr/sshuttle`  
 After the server you intend to tunnel though has `sshd` running, from your local machine, run:  
-```bash
+```shell
 # Syntax:
 sshuttle --dns -vvr <proxy-user-account>@<proxy> 0/0
 # Example:
@@ -300,7 +300,7 @@ Test if there is any leakage by visiting the DNS leak test [Web site](https://ww
 
 ### Socks <a id="ssh-socks"/>
 Setup socks proxy through `<proxy>`
-```bash
+```shell
 ssh -D9090 <proxy-user-account>@<proxy>
 ```
 Useful resource:  
@@ -310,7 +310,7 @@ Useful resource:
 To forward (or tunnel) from one machine to another, you need to use the -L argument for Local port forwarding.  
 `localhost` is the optional default `hostname`.  
 
-```bash
+```shell
 # Syntax:
 ssh -L [hostname:]<localport>:<localhost-name-on-remote-host>:<remoteport> <proxy-user-account>@<proxy>
 # Example:
@@ -327,7 +327,7 @@ You can also do remote port forwarding by swapping the `-L` for `-R`, the rest o
 Details on tunneling RDP on my [blog post](https://blog.binarymist.net/2010/08/26/installation-of-ssh-on-64bit-windows-7-to-tunnel-rdp/).
 
 You can also **combine tunnel with socks proxy**:
-```bash
+```shell
 # Syntax:
 ssh -D9090 -L 127.0.0.1:9090:127.0.0.1:9050 <proxy-user-account>@<proxy>
 ```
