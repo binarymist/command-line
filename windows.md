@@ -13,7 +13,7 @@ As usual, to see all the options `cmd /?`
 `/c` Carries out the command specified by string and then terminates.  
 `/k` Carries out the command specified by string but remains.
 
-An example of using `/c`, you want to delete a file. `del /q` deletes without prompting for confirmation:
+An example of using `/c`. You want to delete a file. `del /q` deletes without prompting for confirmation:
 
 ```bat
 /c del /q "a-file.txt"
@@ -30,6 +30,18 @@ net use z: \\server\media\music
 ```
 
 If you want persistence, use `/persistent:yes` or `/p:yes` at the end.
+
+## Sc
+
+Service Control - Create, Start, Stop, Query or Delete any Windows [SERVICE](https://ss64.com/nt/syntax-services.html). The command options for SC are case sensitive.
+
+`qc`: Show config - dependencies, full path, etc
+
+For example, show config for service `VMware`:
+
+```bat
+sc qc "VMware"
+```
 
 
 
