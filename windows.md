@@ -1,6 +1,9 @@
 ## Contents
 
-
+* [Cmd](#cmd)
+* [Findstr](#findstr)
+* [Net](#net)
+* [Sc](#sc)
 
 
 
