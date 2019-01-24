@@ -255,7 +255,7 @@ You need to be aware that using agent forwarding opens an attack vector for
 
 Example of copying a file from file-server (through router), to mail-server, to your laptop.
 
-```bash
+```shell
 # In one terminal:
 #    Find file first:
 #    SSH to mail-server from WAN.
