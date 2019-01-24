@@ -13,10 +13,10 @@ As usual, to see all the options `cmd /?`
 `/c` Carries out the command specified by string and then terminates.  
 `/k` Carries out the command specified by string but remains.
 
-An example of using `/c`, you want to delete a file:
+An example of using `/c`, you want to delete a file. `del /q` deletes without prompting for confirmation:
 
 ```bat
-/c del /Q "a-file.txt"
+/c del /q "a-file.txt"
 ```
 
 ## [Net](https://www.computerhope.com/nethlp.htm)
