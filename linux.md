@@ -6,6 +6,7 @@
   * [Screen Recording](#screen-recording)
   * [Croping Screen Capture](#audio-video-croping-screen-capture)
   * [Video to Gif](#video-to-gif)
+  * [Wav to Mp3](#wav-to-mp3)
 * [Fdisk](#fdisk)
 * [Lshw](#lshw-hardware-lister-for-linux)
 * [Macchanger](#macchanger)
@@ -167,7 +168,15 @@ ffmpeg -ss 00:00:00.000 -i input.mov -pix_fmt rgb24 -r 2 -s 800x700 -t 00:00:10.
 
 If you want to add the image file to your git wiki or readme, simply navigate to your github repository issues, click "New Issue", drag your image into the "Write" box, and your image will upload, copy the url and add it to your wiki page or readme, you don't need to actually create the issue.
 
-## [Fdisk]()
+## [Wav to Mp3](https://trac.ffmpeg.org/wiki/Encode/MP3)
+
+Converting your riped CD songs to .mp3:
+
+```shell
+ffmpeg -i Track2.wav -codec:a libmp3lame -qscale:a 2 Track2.mp3
+```
+
+## Fdisk
 
 Shows partition information.
 ```bash
