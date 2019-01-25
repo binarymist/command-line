@@ -4,17 +4,15 @@
 * [Findstr](#findstr)
 * [Net](#net)
 * [Sc](#sc)
-
-
-
-
+* [Tasklist](#tasklist)
 
 ## Cmd
 
 As usual, to see all the options `cmd /?`  
 
 `/c` Carries out the command specified by string and then terminates.  
-`/k` Carries out the command specified by string but remains.
+`/k` Carries out the command specified by string but remains.  
+`/s` Modifies the treatment of _string_ after `/c` or `/k`.
 
 An example of using `/c`. You want to delete a file. `del /q` deletes without prompting for confirmation:
 
@@ -58,6 +56,23 @@ For example, show config for service `VMware`:
 sc qc "VMware"
 ```
 
+## [Tasklist](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist)
+
+Displays a list of currently running processes on the local computer or on a remote computer.
+
+`fi <filter>` Specifies the types of processes (_[filter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist#filter-names-operators-and-values)_) to include in or exclude from the query.
+
+`"IMAGENAME eq devenv.exe"`  Image name is equal to `devenv.exe` (VisualStudio).
+
+`"PID eq 11184"` Process ID is equal to `11184`
+
+`/fo {table | list | csv}` Specifies the format to use for the output. Valid values are `table`, `list`, and `csv`. The default format for output is table.
+
+`/nh` Suppresses column headers in the output. Valid when the `/fo` parameter is set to `table` or `csv`.
+
+```bat
+/s /c "tasklist /fi "IMAGENAME eq devenv.exe" /fi "PID eq 11184" /fo TABLE /nh"
+```
 
 
 
