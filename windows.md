@@ -17,6 +17,7 @@ As usual, to see all the options `cmd /?`
 An example of using `/c`. You want to delete a file. `del /q` deletes without prompting for confirmation:
 
 ```bat
+rem Example:
 /c del /q "a-file.txt"
 ```
 
@@ -24,9 +25,8 @@ An example of using `/c`. You want to delete a file. `del /q` deletes without pr
 
 Searches for patterns of text in files.
 
-An example could be:
-
 ```bat
+rem Example:
 /c sc qc "VMware" | findstr BINARY_PATH_NAME | findstr /i /v /l /c:"c:\windows" | findstr /v /c:""""
 ```
 
@@ -71,6 +71,7 @@ Displays a list of currently running processes on the local computer or on a rem
 `/nh` Suppresses column headers in the output. Valid when the `/fo` parameter is set to `table` or `csv`.
 
 ```bat
+rem Example:
 /s /c "tasklist /fi "IMAGENAME eq devenv.exe" /fi "PID eq 11184" /fo TABLE /nh"
 ```
 
