@@ -3,6 +3,7 @@
 * [Cmd](#cmd)
 * [Findstr](#findstr)
 * [Net](#net)
+* [Netsh](#netsh)
 * [Sc](#sc)
 * [Tasklist](#tasklist)
 
@@ -43,6 +44,24 @@ net use z: \\server\media\music
 ```
 
 If you want persistence, use `/persistent:yes` or `/p:yes` at the end.
+
+## [Netsh](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj129382(v=ws.11))
+
+Capturing network packet traces.
+
+You will need to run the `netsh` commands with elevated privileges, including the `stop` command if you choose to set `persistent` to `yes`
+
+```bat
+rem Example:
+netsh trace start persistent=yes capture=yes tracefile=c:\temp\nettrace-boot.etl
+```
+
+`[persistent=]{yes|no}` defaults to no. Specifies whether the tracing session will resume when the computer is restarting.  
+If this is set to `yes` then you will need to run the `netsh trace stop` command.
+
+`traceFile` optionally specifies the location to save the output file. If unspecified, the output file will be saved to the default location with default name `traceFile=%LOCALAPPDATA%\Temp\NetTraces\NetTrace.etl`
+
+You may also want to set the capture `maxSize`, limit the capture to certain IP addresses with `ipv4.address=x.x.x.x`. There are many other options
 
 ## Sc
 
