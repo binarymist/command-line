@@ -49,7 +49,7 @@ If you want persistence, use `/persistent:yes` or `/p:yes` at the end.
 
 Capturing network packet traces.
 
-You will need to run the `netsh` commands with elevated privileges, including the `stop` command if you choose to set `persistent` to `yes`
+You will need to run the `netsh` commands with elevated privileges, including the `stop` command if you choose to set `persistent` to `yes`.
 
 ```bat
 rem Example:
@@ -57,7 +57,7 @@ netsh trace start persistent=yes capture=yes tracefile=c:\temp\nettrace-boot.etl
 ```
 
 `[persistent=]{yes|no}` defaults to no. Specifies whether the tracing session will resume when the computer is restarting.  
-If this is set to `yes` then you will need to run the `netsh trace stop` command.
+If this is set to `yes` then you will need to run the `netsh trace stop` command, and remember to do this with elevated privileges, else you may get a message like "There is no trace session currently in progress." .
 
 `traceFile` optionally specifies the location to save the output file. If unspecified, the output file will be saved to the default location with default name `traceFile=%LOCALAPPDATA%\Temp\NetTraces\NetTrace.etl`
 
