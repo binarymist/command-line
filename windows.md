@@ -63,6 +63,12 @@ If this is set to `yes` then you will need to run the `netsh trace stop` command
 
 You may also want to set the capture `maxSize`, limit the capture to certain IP addresses with `ipv4.address=x.x.x.x`. There are many other options
 
+Useful resources:
+
+* https://blogs.msdn.microsoft.com/canberrapfe/2012/03/30/capture-a-network-trace-without-installing-anything-capture-a-network-trace-of-a-reboot/
+* https://blogs.msdn.microsoft.com/benjaminperkins/2018/03/09/capture-a-netsh-network-trace/
+* https://www.concurrency.com/blog/december-2017/netsh-packet-captures
+
 ## Sc
 
 Service Control - Create, Start, Stop, Query or Delete any Windows [SERVICE](https://ss64.com/nt/syntax-services.html). The command options for SC are case sensitive.
