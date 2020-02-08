@@ -1,8 +1,8 @@
 ## Contents
 
-* [Windows](windows.md)
+* [Git](git.md)
 * [Linux](linux.md)
-
+* [Windows](windows.md)
 
 
 ## License
