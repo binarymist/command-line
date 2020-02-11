@@ -37,3 +37,6 @@ or
 
 [`git show`](https://git-scm.com/docs/git-show)` --name-only {commit}` # replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`
 
+Show Remotes  
+`git remote -v`
+
