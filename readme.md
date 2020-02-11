@@ -1,4 +1,4 @@
-The following are a set of commads I find useful and use repeatedly.
+The following are a set of commads I find useful and use repeatedly. Hopefully you'll get some use out of them also.
 
 ## Contents
 
