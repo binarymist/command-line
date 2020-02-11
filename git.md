@@ -9,12 +9,16 @@
 
 ## Assumptions, Prerequisites
 
-Your git configs are set-up
+Your git configs are set-up:
+
+* `~/.gitconfig`
 
 Install the cross platform diff tool "diffuse". It's free and open:
 
 * Linux (Debian based): `apt-get install diffuse`
 * Windows: http://diffuse.sourceforge.net/
+
+On Linux use zsh, oh-my-zsh, and the oh-my-zsh git plugin
 
 ## Working with Remotes using SSH
 
@@ -44,7 +48,7 @@ If you want to revert all changes in your working directory to the last commit:
 
 `git checkout -- name/of/file/to/unstage.txt`
 
-`git commit -v`  
+`git commit -v` Will run the text editor you set-up in your config  
 or  
 `git commit -m '<my commit message>'`
 
