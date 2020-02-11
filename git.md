@@ -58,14 +58,14 @@ or
 [`git show`](https://git-scm.com/docs/git-show)`--name-only {commit}`. Replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`  
 As a shortcut, Git uses the `^` notation to mean "one commit prior.", so `HEAD^^` means 2 commits prior to `HEAD`
 
-Show Remotes  
+Show Remotes:  
 `git remote -v`
 
 ## Github
 
 ### Compare View
 
-To get to the [compare view](https://help.github.com/en/github/committing-changes-to-your-project/comparing-commits), just append `/compare` to your github repository  
+To get to the [compare view](https://help.github.com/en/github/committing-changes-to-your-project/comparing-commits), just append `/compare` to your github repository:  
 https://github.com/binarymist/command-line/compare  
 This allows you to compare just about anythng.
 
@@ -108,7 +108,7 @@ Push tags and branches:
 ## `git log`
 
 Show unpushed git commits:  
-`git log origin/master..HEAD`  
+[`git log origin/master..HEAD`](https://stackoverflow.com/questions/2016901/viewing-unpushed-git-commits#answer-2016954)  
 Or to show the actual changes:  
 `git diff origin/master..HEAD`
 
