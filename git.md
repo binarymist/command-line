@@ -72,7 +72,14 @@ fetches the `develop` branch from origin and stores it as a remote branch locall
 [`git push`](https://git-scm.com/docs/git-push)`origin master`  
 Pushes your local `master` branch to the origin's `master` branch.
 
+Push with dry run  
+`git push --dry-run --porcelain`
 
+Push a new branch to origin and add upstream tracking  
+`git push -u origin <myNewBranchThatOriginDoesn'tKnowAbout>`
+
+Push tags and branches  
+`git push --all origin`
 
 
 ## Less Used Commands
