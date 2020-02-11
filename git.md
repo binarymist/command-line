@@ -119,6 +119,7 @@ Merge into `master` from your feature branch (`amazing_feature`):
 
 [git-scm Basic Merge Conflicts](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts)
 
+Once conflicts are shown: `git mergetool` will allow you to merge with your configured merge tool. Failing that, just do it manually. Then add the changed file to staging, then `git status` again.
 
 
 
