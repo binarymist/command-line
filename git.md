@@ -9,6 +9,7 @@
   * [Merge Conflicts](#merge-conflicts)
 * [Pushing](#pushing)
 * [git log](#git-log)
+* [Branch Management](#branch-management)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
@@ -164,6 +165,13 @@ Single file:
 `git log -- file/I/want/to/see/all/commits/for`
 
 Commits for an author, just add `--author=Kim`
+
+## Branch Management
+
+Todo
+
+
+
 
 ## Less Used Commands
 
