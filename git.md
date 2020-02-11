@@ -64,8 +64,9 @@ Show Remotes
 
 ### Compare View
 
-To get to the compare view, just append `/compare` to your github repository  
-https://github.com/binarymist/command-line/compare
+To get to the [compare view](https://help.github.com/en/github/committing-changes-to-your-project/comparing-commits), just append `/compare` to your github repository  
+https://github.com/binarymist/command-line/compare  
+This allows you to compare just about anythng.
 
 ## Fetching and Merging
 
