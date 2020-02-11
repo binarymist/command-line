@@ -83,6 +83,14 @@ fetches all branches from all remotes and stores them as remote branches locally
 fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
 
 
+
+
+Merge into `master` from your feature branch (`amazing_feature`):
+
+1. `git checkout master`
+2. `git merge <amazing_feature>`
+
+
 Merge: Todo
 
 
