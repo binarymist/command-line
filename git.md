@@ -10,6 +10,7 @@
 * [Pushing](#pushing)
 * [git log](#git-log)
 * [Branch Management](#branch-management)
+  * [Deleting Branches](#deleting-branches)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
@@ -197,6 +198,8 @@ If you are already on a branch (say `feature1`) and I have made some changes on 
 
 Same as above, but newBranch already exists:  
 `git checkout newBranch`
+
+### Deleting Branches
 
 ## Less Used Commands
 
