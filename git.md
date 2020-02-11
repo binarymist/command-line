@@ -31,3 +31,6 @@ If you want to revert all changes in your working directory to the last commit:
 
 `git checkout -- name/of/file/to/unstage.txt`
 
+`git commit -v`  
+or  
+`git commit -m '<my commit message>'`
