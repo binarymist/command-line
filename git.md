@@ -20,6 +20,9 @@ Getting you ssh key to stay in the SSH agent, in git bash:
 
 `git diff HEAD -- file/from/working/dir/to/compare/with/tip/of/current/branch`
 
+`git diff --cached` or `--staged`  
+Or just `diffuse -m` Providing diffuse is installed
+
 [`git add`](https://git-scm.com/docs/git-add)  
 `git add -A`
 
