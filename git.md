@@ -77,8 +77,7 @@ This allows you to compare just about anythng.
 fetches all branches from origin and stores them as remote branches locally.
 
 `git fetch --all`  
-fetches all branches from all remotes and stores them as remote branches locally.
-
+fetches all branches from all remotes and stores them as remote branches locally.  
 `git fetch origin develop`  
 fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
 
@@ -86,9 +85,21 @@ Essentially there are two types of branches, local and remote-tracking (see the 
 
 _So what you mostly do with remote-tracking branches is one of the following:_
 
+* _Create new local branches based on them_
 * _Update them with `git fetch`_
 * _Merge from them into your current branch_
-* _Create new local branches based on them_
+
+1. Create new local branches based on them  
+  _To create a local branch based on a remote-tracking branch (I.E. in order to actually work on it) you can do so with one of the following two commands:_  
+   * `git branch –-track <new_branch_name> [<start_point>]`  
+     This creates a new branch head named <`new_branch_name`> which points to the current `HEAD`, or <`start_point`> if given.  
+   * `git checkout --track -b refactored origin/refactored`  
+   
+   The `--track` option is implied in recent versions of git if the last parameter is a remote-tracking branch
+2. Update them with `git fetch`
+
+
+
 
 
 Merge into `master` from your feature branch (`amazing_feature`):
