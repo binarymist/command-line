@@ -186,7 +186,17 @@ Merge [only specific files](http://jasonrudolph.com/blog/2009/02/25/git-tip-how-
 Merge [only specific changes from specific files](https://stackoverflow.com/questions/18115411/how-to-merge-specific-files-from-git-branches) from a specific branch to the current branch:  
 `git checkout --patch [other_branch] <file_paths>...`
 
+Create new branch from master and switch to it:  
+`git checkout -b myFeature master`  
+Which is short for:  
+`git branch myFeature`  
+`git checkout myFeature`
 
+If you are already on a branch (say feature2) and I have made some changes on it but want those changes to be on a newBranch:  
+`git checkout -b newBranch`
+
+Same as above, but newBranch already exists:  
+`git checkout newBranch`
 
 ## Less Used Commands
 
