@@ -60,6 +60,7 @@ Show Remotes
 
 ## Github
 
+### Compare View
 
 
 ## Fetching and Merging
