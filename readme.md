@@ -1,3 +1,5 @@
+The following are a set of commads I find useful and use repeatedly.
+
 ## Contents
 
 * [Git](git.md)
