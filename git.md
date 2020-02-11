@@ -96,19 +96,21 @@ Merge: Todo
 [`git push`](https://git-scm.com/docs/git-push)`origin master`  
 Pushes your local `master` branch to the origin's `master` branch.
 
-Push with dry run  
+Push with dry run:  
 `git push --dry-run --porcelain`
 
-Push a new branch to origin and add upstream tracking  
+Push a new branch to origin and add upstream tracking:  
 `git push -u origin <myNewBranchThatOriginDoesn'tKnowAbout>`
 
-Push tags and branches  
+Push tags and branches:  
 `git push --all origin`
-
 
 ## `git log`
 
-
+Show unpushed git commits:  
+`git log origin/master..HEAD`  
+Or to show the actual changes:  
+`git diff origin/master..HEAD`
 
 
 ## Less Used Commands
