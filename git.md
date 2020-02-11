@@ -11,7 +11,9 @@
 
 Your git configs are set-up
 
-Install the cross platform diff tool "diffuse". It's free and open.
+Install the cross platform diff tool "diffuse". It's free and open.  
+Linux (Debian based): `apt-get install diffuse`  
+Windows: http://diffuse.sourceforge.net/``
 
 ## Working with Remotes using SSH
 
