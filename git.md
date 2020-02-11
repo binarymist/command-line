@@ -3,6 +3,7 @@
 * [Working with Remotes using SSH](#working-with-remotes-using-ssh)
 * [Most Commonly Used](#most-commonly-used)
 * [Fetching and Merging](fetching-and-merging)
+* [Pushing](#pushing)
 
 ## Working with Remotes using SSH
 
@@ -55,4 +56,4 @@ fetches all branches from all remotes and stores them as remote branches locally
 fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
 
 
-
+## Pushing
