@@ -6,6 +6,7 @@
 * [Github](#github)
   * [Compare View](#compare-view)
 * [Fetching and Merging](fetching-and-merging)
+  * [Merge Conflicts](#merge-conflicts)
 * [Pushing](#pushing)
 * [git log](#git-log)
 * [Less Used Commands](#less-used-commands)
