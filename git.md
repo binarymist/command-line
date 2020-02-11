@@ -1,6 +1,7 @@
 ## Contents
 
 * [Working with Remotes using SSH](#working-with-remotes-using-ssh)
+* [Most Commonly Used](#most-commonly-used)
 
 ## Working with Remotes using SSH
 
@@ -10,4 +11,6 @@ Getting you ssh key to stay in the SSH agent, in git bash:
   `eval $(ssh-agent)`
 2. Add the private key to the `ssh-agent` for the shell you are using with:  
   `ssh-add`
+
+## Most Commonly Used
 
