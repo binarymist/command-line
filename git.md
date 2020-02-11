@@ -7,6 +7,7 @@
   * [Compare View](#compare-view)
 * [Fetching and Merging](fetching-and-merging)
 * [Pushing](#pushing)
+* [git log](#git-log)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
