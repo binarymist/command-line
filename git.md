@@ -43,8 +43,10 @@ Show Remotes
 
 ## Fetching and Merging
 
+`fetch` gives you a chance to examine the changes you just fetched.
+
 `git fetch origin`  
-gives you a chance to examine the changes you just fetched. It fetches all branches from origin and stores them as remote branches locally.
+It fetches all branches from origin and stores them as remote branches locally.
 
 
 
