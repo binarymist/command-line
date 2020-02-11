@@ -105,6 +105,11 @@ Push tags and branches
 `git push --all origin`
 
 
+## `git log`
+
+
+
+
 ## Less Used Commands
 
 Show all files in the index  
