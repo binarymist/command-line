@@ -201,6 +201,13 @@ Same as above, but newBranch already exists:
 
 ### Deleting Branches
 
+Delete local branch:  
+`git branch -d <nameOfMyLocalBranch>`
+
+
+
+
+
 ## Less Used Commands
 
 Show all files in the index  
