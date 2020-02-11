@@ -46,8 +46,9 @@ Show Remotes
 `fetch` gives you a chance to examine the changes you just fetched.
 
 [`git fetch origin`](https://git-scm.com/docs/git-fetch#_examples)  
-It fetches all branches from origin and stores them as remote branches locally.
+fetches all branches from origin and stores them as remote branches locally.
 
-
+`git fetch --all`  
+fetches all branches from all remotes and stores them as remote branches locally.
 
 
