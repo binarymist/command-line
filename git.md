@@ -34,3 +34,6 @@ If you want to revert all changes in your working directory to the last commit:
 `git commit -v`  
 or  
 `git commit -m '<my commit message>'`
+
+`git show --name-only {commit}` # replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`
+
