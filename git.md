@@ -180,7 +180,11 @@ Show remote branches
 Show both remote and local branches:  
 `git branch -av`
 
+Merge [only specific files](http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/) from a specific branch to the current branch:  
+`git checkout [other_branch] <file_paths>...`
 
+Merge [only specific changes from specific files](https://stackoverflow.com/questions/18115411/how-to-merge-specific-files-from-git-branches) from a specific branch to the current branch:  
+`git checkout --patch [other_branch] <file_paths>...`
 
 
 
