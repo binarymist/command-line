@@ -63,6 +63,8 @@ Show Remotes
 
 ### Compare View
 
+To get to the compare view, just append `/compare` to your github repository  
+https://github.com/binarymist/command-line/compare
 
 ## Fetching and Merging
 
