@@ -54,7 +54,8 @@ If you want to revert all changes in your working directory to the last commit:
 or  
 `git commit -m '<my commit message>'`
 
-[`git show`](https://git-scm.com/docs/git-show)`--name-only {commit}`. Replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`
+[`git show`](https://git-scm.com/docs/git-show)`--name-only {commit}`. Replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`  
+As a shortcut, Git uses the `^` notation to mean "one commit prior.", so `HEAD^^` means 2 commits prior to `HEAD`
 
 Show Remotes  
 `git remote -v`
