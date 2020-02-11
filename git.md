@@ -77,6 +77,10 @@ Pushes your local `master` branch to the origin's `master` branch.
 
 ## Less Used Commands
 
+Show all files in the index  
+[`git ls-files`](https://git-scm.com/docs/git-ls-files)
+
+
 
 
 
