@@ -112,6 +112,22 @@ Show unpushed git commits:
 Or to show the actual changes:  
 `git diff origin/master..HEAD`
 
+Show commits which are pointed to by tags or branches:  
+`git log --graph --all --decorate`
+
+`--abbrev-commit` shows a shortend commit hash:  
+`git log --abbrev-commit --graph --oneline --all`
+
+`--decorate` shows the branch names:  
+`git log --abbrev-commit --graph --oneline --all --decorate`
+
+Show only the `kimsBranch` and all branches leading into it:  
+`git log --abbrev-commit --graph --oneline --decorate --branches=kimsBranch`
+
+Single file:  
+`git log -- file/I/want/to/see/all/commits/for`
+
+Commits for an author, just add `--author=Kim`
 
 ## Less Used Commands
 
