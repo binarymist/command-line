@@ -14,3 +14,17 @@ Getting you ssh key to stay in the SSH agent, in git bash:
 
 ## Most Commonly Used
 
+`git status`
+
+`git diff`
+
+`git diff HEAD -- file/from/working/dir/to/compare/with/tip/of/current/branch`
+
+[`git add`](https://git-scm.com/docs/git-add)  
+`git add -A`
+
+If you want to revert all changes in your working directory to the last commit:  
+`git reset --hard`
+
+`git checkout -- name/of/file/to/unstage.txt`
+
