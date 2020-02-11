@@ -114,8 +114,10 @@ Merge into `master` from your feature branch (`amazing_feature`):
 1. `git checkout master`
 2. `git merge <amazing_feature>`
 
+### Merge Conflicts
 
-Merge: Todo
+[git-scm Basic Merge Conflicts](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merge_conflicts)
+
 
 
 
