@@ -3,6 +3,7 @@
 * [Assumptions, Prerequisites](#assumptions-prerequisites)
 * [Working with Remotes using SSH](#working-with-remotes-using-ssh)
 * [Most Commonly Used](#most-commonly-used)
+* [Github](#github)
 * [Fetching and Merging](fetching-and-merging)
 * [Pushing](#pushing)
 * [Less Used Commands](#less-used-commands)
@@ -57,6 +58,10 @@ or
 Show Remotes  
 `git remote -v`
 
+## Github
+
+
+
 ## Fetching and Merging
 
 `fetch` gives you a chance to examine the changes you just fetched.
@@ -69,6 +74,14 @@ fetches all branches from all remotes and stores them as remote branches locally
 
 `git fetch origin develop`  
 fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
+
+
+Merge: Todo
+
+
+
+
+
 
 
 ## Pushing
