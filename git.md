@@ -4,6 +4,7 @@
 * [Working with Remotes using SSH](#working-with-remotes-using-ssh)
 * [Most Commonly Used](#most-commonly-used)
 * [Github](#github)
+  * [Compare View](#compare-view)
 * [Fetching and Merging](fetching-and-merging)
 * [Pushing](#pushing)
 * [Less Used Commands](#less-used-commands)
