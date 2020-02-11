@@ -82,7 +82,13 @@ fetches all branches from all remotes and stores them as remote branches locally
 `git fetch origin develop`  
 fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
 
+Essentially there are two types of branches, local and remote-tracking (see the "Types of Branches" section [here](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)).
 
+_So what you mostly do with remote-tracking branches is one of the following:_
+
+* _Update them with `git fetch`_
+* _Merge from them into your current branch_
+* _Create new local branches based on them_
 
 
 Merge into `master` from your feature branch (`amazing_feature`):
