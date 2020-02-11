@@ -89,18 +89,25 @@ _So what you mostly do with remote-tracking branches is one of the following:_
 * _Update them with `git fetch`_
 * _Merge from them into your current branch_
 
-1. Create new local branches based on them  
+1. Create new local branches based on them:  
   _To create a local branch based on a remote-tracking branch (I.E. in order to actually work on it) you can do so with one of the following two commands:_  
    * `git branch –-track <new_branch_name> [<start_point>]`  
      This creates a new branch head named <`new_branch_name`> which points to the current `HEAD`, or <`start_point`> if given.  
    * `git checkout --track -b refactored origin/refactored`  
    
    The `--track` option is implied in recent versions of git if the last parameter is a remote-tracking branch
-2. Update them with `git fetch`
+2. Update them with `git fetch`:  
+  `git fetch origin`  
+  This will update your remote-tracking branches. `git fetch` doesn’t touch your working tree at all. To get any remote changes from your updated remote-tracking branches, you now need to do a `git merge`. So if for example you are on the `master` branch, you would do the following:  
+  `git merge origin/master`.  
+  If you would rather see the differences in the two branches before you merge:  
+  `git diff master origin/master`  
+  Or  
+  `git difftool -t diffuse master origin/master`
 
 
 
-
+&nbsp;&nbsp;
 
 Merge into `master` from your feature branch (`amazing_feature`):
 
