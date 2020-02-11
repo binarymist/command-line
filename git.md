@@ -168,7 +168,18 @@ Commits for an author, just add `--author=Kim`
 
 ## Branch Management
 
-Todo
+Show status of local and remote branches:  
+`git remote show origin`
+
+Show local branches only:  
+`git branch`
+
+Show remote branches  
+`git branch -r`
+
+Show both remote and local branches:  
+`git branch -av`
+
 
 
 
