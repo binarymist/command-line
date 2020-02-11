@@ -51,4 +51,8 @@ fetches all branches from origin and stores them as remote branches locally.
 `git fetch --all`  
 fetches all branches from all remotes and stores them as remote branches locally.
 
+`git fetch origin develop`  
+fetches the `develop` branch from origin and stores it as a remote branch locally: `remotes/origin/develop`
+
+
 
