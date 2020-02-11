@@ -59,5 +59,6 @@ fetches the `develop` branch from origin and stores it as a remote branch locall
 ## Pushing
 
 [`git push`](https://git-scm.com/docs/git-push)`origin master`  
+Pushes your local `master` branch to the origins `master` branch
 
 
