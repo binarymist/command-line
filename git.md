@@ -9,7 +9,7 @@
 
 ## Assumptions, Prerequisites
 
-Your git configs are set-up:
+Your git configs are [set-up](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup):
 
 * `~/.gitconfig`
 
