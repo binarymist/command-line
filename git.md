@@ -192,7 +192,7 @@ Which is short for:
 `git branch myFeature`  
 `git checkout myFeature`
 
-If you are already on a branch (say feature2) and I have made some changes on it but want those changes to be on a newBranch:  
+If you are already on a branch (say `feature1`) and I have made some changes on it but want those changes to be on a newBranch:  
 `git checkout -b newBranch`
 
 Same as above, but newBranch already exists:  
