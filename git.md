@@ -2,6 +2,7 @@
 
 * [Working with Remotes using SSH](#working-with-remotes-using-ssh)
 * [Most Commonly Used](#most-commonly-used)
+* [Fetching and Merging](fetching-and-merging)
 
 ## Working with Remotes using SSH
 
@@ -40,3 +41,6 @@ or
 Show Remotes  
 `git remote -v`
 
+## Fetching and Merging
+
+Todo
