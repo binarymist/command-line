@@ -224,7 +224,7 @@ View history of single file. Often you will have to go into the directory of the
 Then use the commit hashes as diffuse arguments:  
 [`diffuse -r <commit_hash> <name_of_file>`](http://diffuse.sourceforge.net/manual.html#file-comparison)  
 Or two (or any number of) revisions of the same file:  
-`diffuse -r <commit_hash_1> -r <commit_hash_2> <name_of_file>
+`diffuse -r <commit_hash_1> -r <commit_hash_2> <name_of_file>`
 
 
 
