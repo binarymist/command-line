@@ -255,7 +255,9 @@ Apply changes in `myPatchFile` to your current working directory:
 [Create two patch files](http://makandracards.com/makandra/2521-git-how-to-create-and-apply-patches), one for each commit since `HEAD~~`:  
 `git format-patch HEAD~~`
 
-
+Docs:  
+[`git format-patch`](https://git-scm.com/docs/git-format-patch)  
+[`git apply`](https://git-scm.com/docs/git-apply)
 
 
 
