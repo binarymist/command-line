@@ -11,7 +11,7 @@
 * [git log](#git-log)
 * [Branch Management](#branch-management)
   * [Deleting Branches](#deleting-branches)
-* [Diffing](#diffing]
+* [Diffing](#diffing)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
