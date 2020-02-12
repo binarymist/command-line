@@ -76,6 +76,11 @@ To get to the [compare view](https://help.github.com/en/github/committing-change
 https://github.com/binarymist/command-line/compare  
 This allows you to compare just about anythng.
 
+&nbsp;
+
+[Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
+
+
 ## Fetching and Merging
 
 `fetch` gives you a chance to examine the changes you just fetched.
