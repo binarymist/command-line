@@ -226,6 +226,11 @@ Then use the commit hashes as diffuse arguments:
 Or two (or any number of) revisions of the same file:  
 `diffuse -r <commit_hash_1> -r <commit_hash_2> <name_of_file>`
 
+Diff single file from `HEAD` of current branch to working directory:  
+`git diff HEAD -- path/of/file/I/want/to/diff`
+
+[Compare two different files in two different revisions](http://stackoverflow.com/questions/3338126/git-how-to-diff-the-same-file-between-two-different-commits-on-the-same-branch):  
+`git diff <revision_1>:<file_1> <revision_2>:<file_2>`
 
 
 ## Less Used Commands
