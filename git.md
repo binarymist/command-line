@@ -260,6 +260,8 @@ Docs:
 [`git format-patch`](https://git-scm.com/docs/git-format-patch)  
 [`git apply`](https://git-scm.com/docs/git-apply)
 
+## Tagging
+
 
 
 ## Less Used Commands
