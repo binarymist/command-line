@@ -13,6 +13,7 @@
   * [Deleting Branches](#deleting-branches)
 * [Diffing](#diffing)
 * [Patching](#patching)
+* [Tagging](#tagging)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
