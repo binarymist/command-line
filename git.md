@@ -204,7 +204,17 @@ Same as above, but `newBranch` already exists:
 Delete local branch:  
 `git branch -d <nameOfMyLocalBranch>`
 
+[Delete local remote-tracking branch and origins remote](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely):  
+`git push <remote_name> --delete <branch_name>`  
+Ex: `git push origin --delete newFeature`  
+`origin` is the remote defined in your repositories `./.git/config` file, or another way to find the remote is with `git branch -va`, the remote is usually `origin`.  
 
+If remote branches have already been removed:  
+`git remote prune <remote>`  
+Or  
+[`git fetch -p`](https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote)  
+Or  
+`git remote prune origin`
 
 
 
