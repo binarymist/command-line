@@ -7,7 +7,7 @@
   * [Compare View](#compare-view)
   * [Collaborating](#collaborating)
 * [Git Workflows](#git-workflows)
-* [Fetching and Merging](fetching-and-merging)
+* [Fetching and Merging](#fetching-and-merging)
   * [Merge Conflicts](#merge-conflicts)
 * [Pushing](#pushing)
 * [git log](#git-log)
