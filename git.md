@@ -262,6 +262,9 @@ Docs:
 
 ## Tagging
 
+Apply Tag:  
+`git tag <tag_text> <hash_to_apply_tag_to>`
+
 
 
 ## Less Used Commands
