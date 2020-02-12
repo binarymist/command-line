@@ -252,6 +252,8 @@ Create a patch with all changes from current point to `hash1`:
 Apply changes in `myPatchFile` to your current working directory:  
 `git apply <myPatchFile>`
 
+[Create two patch files](http://makandracards.com/makandra/2521-git-how-to-create-and-apply-patches), one for each commit since `HEAD~~`:  
+`git format-patch HEAD~~`
 
 
 
