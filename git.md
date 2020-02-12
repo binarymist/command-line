@@ -265,6 +265,9 @@ Docs:
 Apply Tag:  
 `git tag <tag_text> <hash_to_apply_tag_to>`
 
+Delete Tag:  
+`git tag -d <tag_text>`
+
 
 
 ## Less Used Commands
