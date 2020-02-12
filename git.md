@@ -14,6 +14,7 @@
 * [Diffing](#diffing)
 * [Patching](#patching)
 * [Tagging](#tagging)
+* [Stashing](#stashing)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
@@ -279,7 +280,7 @@ List Tags:
 Or  
 `git push --delete origin <tagname>`
 
-
+## Stashing
 
 
 ## Less Used Commands
