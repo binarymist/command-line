@@ -268,6 +268,11 @@ Apply Tag:
 Delete Tag:  
 `git tag -d <tag_text>`
 
+Push Tags:  
+`git push origin --tags`
+
+
+
 
 
 ## Less Used Commands
