@@ -249,6 +249,10 @@ or:
 Create a patch with all changes from current point to `hash1`:  
 `git format-patch <hash1> --stdout > <myPatchFile>`
 
+Apply changes in `myPatchFile` to your current working directory:  
+`git apply <myPatchFile>`
+
+
 
 
 
