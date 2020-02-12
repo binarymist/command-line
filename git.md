@@ -271,6 +271,8 @@ Delete Tag:
 Push Tags:  
 `git push origin --tags`
 
+List Tags:  
+`git tag`
 
 
 
