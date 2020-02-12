@@ -14,6 +14,7 @@
 * [Branch Management](#branch-management)
   * [Deleting Branches](#deleting-branches)
 * [Diffing](#diffing)
+* [Rebasing](#rebasing)
 * [Squashing](#squashing)
 * [Patching](#patching)
 * [Tagging](#tagging)
@@ -259,6 +260,10 @@ List all files that were changed between revisions:
 `git diff --name-only <SHA1> <SHA2>`  
 or:  
 `git diff --name-only HEAD~10 HEAD~5`
+
+## Rebasing
+
+Todo
 
 ## Squashing
 
