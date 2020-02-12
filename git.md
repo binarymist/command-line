@@ -17,6 +17,7 @@
 * [Patching](#patching)
 * [Tagging](#tagging)
 * [Stashing](#stashing)
+* [Undoing](#undoing)
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
@@ -320,6 +321,10 @@ If you pop a stash to the wrong branch that has untracked files... I.E. before y
 
 Checkout single files from stash `0`  
 `git checkout stash@{0} -- <filename>`
+
+## Undoing
+
+[Undoing just about anything](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
 ## Less Used Commands
 
