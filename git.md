@@ -11,6 +11,7 @@
 * [git log](#git-log)
 * [Branch Management](#branch-management)
   * [Deleting Branches](#deleting-branches)
+* [Diffing](#diffing]
 * [Less Used Commands](#less-used-commands)
 
 ## Assumptions, Prerequisites
@@ -215,6 +216,9 @@ Or
 [`git fetch -p`](https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote)  
 Or  
 `git remote prune origin`
+
+## Diffing
+
 
 
 
