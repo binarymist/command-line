@@ -141,9 +141,7 @@ Merge into `master` from your feature branch (`amazing_feature`):
 
 Once conflicts are shown: `git mergetool` will allow you to merge with your configured merge tool. Failing that, just do it manually. Then add the changed file to staging, then `git status` again.
 
-
-
-Todo
+[Conflict resolution](https://gitguys.com/topics/merging-with-a-conflict-conflicts-and-resolutions/)
 
 
 
