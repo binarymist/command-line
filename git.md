@@ -238,6 +238,13 @@ Or to open all file comparisons:
 `git difftool <commit_1> <commit_2>` # works across branches  
 `git difftool -t diffuse <develop> <anotherBranch>`
 
+List all files that were changed between revisions:  
+`git diff --name-only <SHA1> <SHA2>`  
+or:  
+`git diff --name-only HEAD~10 HEAD~5`
+
+
+
 
 ## Less Used Commands
 
