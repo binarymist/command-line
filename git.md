@@ -246,6 +246,10 @@ or:
 
 ## Patching
 
+Create a patch with all changes from current point to `hash1`:  
+`git format-patch <hash1> --stdout > <myPatchFile>
+
+
 
 
 
