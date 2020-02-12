@@ -5,6 +5,7 @@
 * [Most Commonly Used](#most-commonly-used)
 * [Github](#github)
   * [Compare View](#compare-view)
+  * [Collaborating](#collaborating)
 * [Fetching and Merging](fetching-and-merging)
   * [Merge Conflicts](#merge-conflicts)
 * [Pushing](#pushing)
@@ -76,7 +77,7 @@ To get to the [compare view](https://help.github.com/en/github/committing-change
 https://github.com/binarymist/command-line/compare  
 This allows you to compare just about anythng.
 
-&nbsp;
+### Collaborating
 
 * [Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 * [Syncing your fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
