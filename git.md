@@ -232,6 +232,12 @@ Diff single file from `HEAD` of current branch to working directory:
 [Compare two different files in two different revisions](http://stackoverflow.com/questions/3338126/git-how-to-diff-the-same-file-between-two-different-commits-on-the-same-branch):  
 `git diff <revision_1>:<file_1> <revision_2>:<file_2>`
 
+[Compare all files from two revisions](http://blog.binarymist.net/2013/02/02/painless-git-diff/):  
+`git difftool -t meld <commit> <commit>`  
+Or to open all file comparisons:  
+`git difftool <commit_1> <commit_2>` # works across branches  
+`git difftool -t diffuse <develop> <anotherBranch>`
+
 
 ## Less Used Commands
 
