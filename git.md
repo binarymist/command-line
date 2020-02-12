@@ -6,6 +6,7 @@
 * [Github](#github)
   * [Compare View](#compare-view)
   * [Collaborating](#collaborating)
+* [Git Workflows](#git-workflows)
 * [Fetching and Merging](fetching-and-merging)
   * [Merge Conflicts](#merge-conflicts)
 * [Pushing](#pushing)
@@ -81,6 +82,8 @@ This allows you to compare just about anythng.
 
 * [Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 * [Syncing your fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+
+## Git Workflows
 
 ## Fetching and Merging
 
