@@ -85,6 +85,11 @@ This allows you to compare just about anythng.
 
 ## Git Workflows
 
+### Git Flow
+
+* [What is it, how does it work](https://nvie.com/posts/a-successful-git-branching-model/)
+* [The library write-up](https://jeffkreeftmeijer.com/git-flow/), [Source](https://github.com/nvie/gitflow), [Wiki](https://github.com/petervanderdoes/gitflow-avh/wiki)
+
 ## Fetching and Merging
 
 `fetch` gives you a chance to examine the changes you just fetched.
