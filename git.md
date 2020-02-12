@@ -274,6 +274,11 @@ Push Tags:
 List Tags:  
 `git tag`
 
+[Delete remote tag](https://stackoverflow.com/questions/5480258/how-to-delete-a-git-remote-tag):  
+`git push origin :<tagname>`  
+Or  
+`git push --delete origin <tagname>`
+
 
 
 
