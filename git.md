@@ -280,8 +280,34 @@ List Tags:
 Or  
 `git push --delete origin <tagname>`
 
-## Stashing
+## [Stashing](https://git-scm.com/docs/git-stash)
 
+A workflow:  
+`git status`  
+`git branch --list -a`  
+`git stash save --include-untracked <a message to help remind me what this is about>`  
+`git status`  
+`git checkout master`  
+`git branch --list -a`  
+`git checkout originalBranch`  
+`git stash list`  
+`git stash show`  
+`git stash pop` # or look at `git stash apply` to apply it but not popping it.
+
+Apply a particular stash:  
+`git stash list` # will show you the <stash> name.  
+`git stash show stash@{0}` # where 0 is the stash number, will show you the stash  
+`git stash apply stash@{0}` # where 0 is the stash number you want to apply, will apply it, same as just `git stash apply` if `0` is used.
+
+If you pop a stash to the wrong branch that has untracked files... I.E. before you checkout the branch that the stash was created from, then you'll have to do the following:
+
+1. Make sure you grab the stash's SHA1 from the `git pop`
+2. `rm` the untracked files you don't want
+3. `git reset <file you want unstaged if there is one or many>`
+4. `git checkout <file you just unstaged>`
+
+Checkout single files from stash `0`  
+`git checkout stash@{0} -- <filename>`
 
 ## Less Used Commands
 
