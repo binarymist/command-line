@@ -35,6 +35,8 @@ Install the cross platform diff tool "diffuse". It's free and open:
 
 On Linux use zsh, oh-my-zsh, and the oh-my-zsh git plugin
 
+Set-up [consistent platform line endings](https://help.github.com/en/github/using-git/configuring-git-to-handle-line-endings)
+
 ## Working with Remotes using SSH
 
 Getting you ssh key to stay in the SSH agent, in git bash:
