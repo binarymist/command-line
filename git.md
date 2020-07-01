@@ -288,16 +288,16 @@ Docs:
 
 ## Tagging
 
-Apply Tag:  
+Apply tag:  
 `git tag <tag_text> <hash_to_apply_tag_to>`
 
-Delete Tag:  
-`git tag -d <tag_text>`
+Delete local tag:  
+`git tag --delete <tag_text>`
 
-Push Tags:  
+Push tags:  
 `git push origin --tags`
 
-List Tags:  
+List tags:  
 `git tag`
 
 [Delete remote tag](https://stackoverflow.com/questions/5480258/how-to-delete-a-git-remote-tag):  
