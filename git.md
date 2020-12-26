@@ -270,7 +270,7 @@ or:
 
 ## Rebasing
 
-Todo
+[Daniel Stenberg of `curl`](#daniel-stenberg-of-curl-workflow-and-tips) has some good tips around rebasing, etc
 
 ## Squashing
 
