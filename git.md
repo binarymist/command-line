@@ -96,6 +96,10 @@ This allows you to compare just about anythng.
 * [What is it, how does it work](https://nvie.com/posts/a-successful-git-branching-model/)
 * [The library write-up](https://jeffkreeftmeijer.com/git-flow/), [Source](https://github.com/nvie/gitflow), [Wiki](https://github.com/petervanderdoes/gitflow-avh/wiki)
 
+### Daniel Stenberg of `curl` Workflow and Tips
+
+* [This Is How I Git](https://daniel.haxx.se/blog/2020/11/09/this-is-how-i-git/): Although technically not a well known workflow, Daniel Stenberg of `curl` offers his git workflow and tips
+
 ## Fetching and Merging
 
 `fetch` gives you a chance to examine the changes you just fetched.
