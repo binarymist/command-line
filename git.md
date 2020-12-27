@@ -272,6 +272,9 @@ or:
 
 [Daniel Stenberg of `curl`](#daniel-stenberg-of-curl-workflow-and-tips) has some good tips around rebasing, etc
 
+[Interactively](https://git-scm.com/docs/git-rebase#_interactive_mode)  
+`git rebase -i <after-this-commit>`
+
 ## Squashing
 
 [Squashing commits](https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit)
