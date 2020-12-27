@@ -280,6 +280,9 @@ or:
 [Interactively](https://git-scm.com/docs/git-rebase#_interactive_mode)  
 `git rebase -i <after-this-commit>`
 
+Keeping your feature branch up to date by rebasing it on the master branch:  
+[`git rebase master`](https://belev.dev/git-merge-vs-rebase-to-keep-feature-branch-up-to-date/)
+
 ## Squashing
 
 [Squashing commits](https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit)
