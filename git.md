@@ -67,7 +67,12 @@ If you want to revert all changes in your working directory to the last commit:
 
 `git commit -v` Will run the text editor you set-up in your config  
 or  
-`git commit -m '<my commit message>'`
+`git commit -m '<my commit message>'`  
+Oh, I need to change that last commit message (use [`--amend`](https://www.atlassian.com/git/tutorials/rewriting-history)):  
+`git commit --amend -m "an updated commit message"`  
+Or add another change I forgot about:  
+`git add <otherFile>`  
+`git commit --amend --no-edit` # Keeps last commit message
 
 [`git show`](https://git-scm.com/docs/git-show)`--name-only {commit}`. Replace the `{commit}` with the SHA1 you want to retrieve, or things like `HEAD` or `HEAD^^`  
 As a shortcut, Git uses the `^` notation to mean "one commit prior.", so `HEAD^^` means 2 commits prior to `HEAD`
