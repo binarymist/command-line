@@ -93,7 +93,7 @@ This allows you to compare just about anythng.
 * [Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 * [Syncing your fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 * [How To: Fork a GitHub Repository & Submit a Pull Request](https://jarv.is/notes/how-to-pull-request-fork-github/)
-* [Checking out Pull Requests locally](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally)
+* [Checking out Pull Requests locally](https://gist.github.com/piscisaureus/3342247)
 
 ## Git Workflows
 
