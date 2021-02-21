@@ -226,7 +226,9 @@ Which is short for:
 `git checkout [myFeature]`
 
 If you are [already on a branch](https://lostechies.com/derickbailey/2010/04/01/git-oops-i-changed-those-files-in-the-wrong-branch/) (say `feature1`) and I have made some changes on it but want those changes to be on a newBranch:  
-`git checkout -b <newBranch>`
+`git checkout -b <newBranch>`  
+Or after git 2.23:  
+git switch -c <new-branch>
 
 Same as above, but `newBranch` already exists:  
 `git checkout [newBranch]`
