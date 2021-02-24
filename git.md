@@ -94,10 +94,11 @@ This allows you to compare just about anythng.
 * [Syncing your fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
 * [How To: Fork a GitHub Repository & Submit a Pull Request](https://jarv.is/notes/how-to-pull-request-fork-github/)
 * [Checking out Pull Requests locally](https://gist.github.com/piscisaureus/3342247)
-  * After this you will need to delete the local remote-tracking branch with:  
+  * Although this will fetch all remote branches, so after you've finished your merge you will need to delete every one with:  
   `git branch --delete --remotes <remote>/<branch>`  
   or  
   `git branch -dr <remote>/branch>`
+* A better way to [fetch just the PR branch you need](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally)
 
 ## Git Workflows
 
