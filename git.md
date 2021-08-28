@@ -104,30 +104,38 @@ This allows you to compare just about anythng.
      ```
      git fetch [origin|upstream] pull/[id]/head:<pr-branch-n>
      ```
-  
-  2. Unless you simply want to merge the pull request, switch to the new branch that's based on this pull request:
-   
-     ```
-     git checkout <pr-branch-n>
-     ```
-  
-  3. Do any required testing.  
-  If you want to make changes to the `pr-branch-n` branch, don't, instead create a branch from it (let's call it `binarymist/pr-branch-n`) and make changes to that branch instead.  
-  If the pull request code changes and you want to get the latest changes:  
-     
-     While on the `pr-branch-n` branch:
-     
-     ```
-     git pull upstream pull/[id]/head
-     ```
-  
-  4. If you made changes to the branched `binarymist/pr-branch-n` branch, you can now rebase on `pr-branch-n`
-  5. Once you have finished making changes to `binarymist/pr-branch-n` and you have rebased to your up to date `pr-branch-n` branch, switch to `pr-branch-n` and merge `binarymist/pr-branch-n`
-  6. When you're ready, you can push the `pr-branch-n` branch:  
-     
-     ```
-     git push origin <pr-branch-n>
-     ```
+
+     * If you simply want to merge the pull request:
+        ```
+        git checkout main
+        git merge <pr-branch-n>
+        git push [origin|upstream] main # This will merge the pull request
+        # Delete branch <pr-branch-n>
+        git branch -d <pr-branch-n>
+        # If it was your pull request you can now also delete the local branch that it was based on:
+        git branch -d <binarymist/my-feature>
+        # And the local remote-tracking branch and origins remote
+        # git push [origin|upstream] --delete <binarymist/my-feature>
+        ```
+     * If you want to work on the pull request, switch to the new branch that's based on this pull request:
+        1. ```
+           git checkout <pr-branch-n>
+           ```
+        2. Do any required testing.  
+           If you want to make changes to the `pr-branch-n` branch, don't, instead create a branch from it (let's call it `binarymist/pr-branch-n`) and make changes to that branch instead.  
+           If the pull request code changes and you want to get the latest changes:  
+           
+           While on the `pr-branch-n` branch:
+           ```
+           git pull upstream pull/[id]/head
+           ```
+           
+        3. If you made changes to the branched `binarymist/pr-branch-n` branch, you can now rebase on `pr-branch-n`
+        4. Once you have finished making changes to `binarymist/pr-branch-n` and you have rebased to your up to date `pr-branch-n` branch, switch to `pr-branch-n` and merge `binarymist/pr-branch-n`
+        5. When you're ready, you can push the `pr-branch-n` branch:
+           ```
+           git push origin <pr-branch-n>
+           ```
 
 ## Git Workflows
 
