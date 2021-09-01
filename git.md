@@ -115,7 +115,7 @@ This allows you to compare just about anythng.
         # If it was your pull request you can now also delete the local branch that it was based on:
         git branch -d <binarymist/my-feature>
         # And the local remote-tracking branch and origins remote
-        # git push [origin|upstream] --delete <binarymist/my-feature>
+        git push [origin|upstream] --delete <binarymist/my-feature>
         ```
      * If you want to work on the pull request, switch to the new branch that's based on this pull request:
         1. ```
