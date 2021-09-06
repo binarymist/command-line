@@ -23,7 +23,7 @@
 
 ## Audio, Video (A/V) <a id="audio-video"/>
 
-The `avconv` audio and video encoder is contained within the libav-tools package. Make sure it is installed before you use it. In Debian based distros, a simple `apt-get install libav-tools` will do.
+The `avconv` audio and video encoder is contained within the libav-tools package. Make sure it is installed before you attempt to use it. In Debian based distros, a simple `apt-get install libav-tools` will do. In Linux Mint 20 onwards avconv is no longer available. The drop-in replacement is [ffmpeg](https://trac.ffmpeg.org/wiki/Capture/Desktop).
 
 ### Modify Command Prompt <a id="audio-video-modify-command-prompt"/>
 
@@ -44,11 +44,17 @@ PS1='\[\e[1;31m\u:\e[m\]\[\e[1;32m\w\e[m\]\$ '
 ```
 #### for ZSH
 
-I've found this works nicely:
+I've found the following works nicely:
 
 ```shell
 export PROMPT='%{$fg[cyan]%}%#%{$reset_color%}'
 
+```
+
+Or if you are using ohmyzsh, pick a [theme](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes) and just source the theme for a temporary change:
+
+```
+source /home/[your-user]/.oh-my-zsh/themes/robbyrussell.zsh-theme
 ```
 
 Changing the font size of the terminal to 18 usually works well for viewers.  
