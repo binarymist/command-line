@@ -290,7 +290,11 @@ If remote branches have already been removed:
 Or  
 [`git fetch -p`](https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote)  
 Or  
-`git remote prune origin`
+`git remote prune origin`  
+If that doesn't work, try:  
+`git branch -d -r <remote>/<branch-name>`
+
+
 
 ## Diffing
 
