@@ -313,9 +313,11 @@ Diff single file from `HEAD` of current branch to working directory:
 
 [Compare all files from two revisions](http://blog.binarymist.net/2013/02/02/painless-git-diff/):  
 `git difftool -t meld <commit> <commit>`  
-Or to open all file comparisons:  
+Or to open all file comparisons in sequence:  
 `git difftool <commit_1> <commit_2>` # works across branches  
-`git difftool -t diffuse <develop> <anotherBranch>`
+`git difftool -t diffuse <develop> <anotherBranch>`  
+Or to open all file comparisons at once:  
+`git difftool --tool=meld --dir-diff <commit_1> <commit_2>`
 
 List all files that were changed between revisions:  
 `git diff --name-only <SHA1> <SHA2>`  
