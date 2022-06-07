@@ -372,6 +372,9 @@ List tags:
 Or  
 `git push --delete origin <tagname>`
 
+Get tags:  
+`git fetch <remote> 'refs/tags/*:refs/tags/*'`
+
 ## [Stashing](https://git-scm.com/docs/git-stash)
 
 A workflow:  
