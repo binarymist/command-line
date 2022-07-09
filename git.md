@@ -130,7 +130,7 @@ This allows you to compare just about anythng.
            git pull upstream pull/[id]/head
            ```
            
-        3. If you made changes to the branched `binarymist/pr-branch-n` branch and `` has changed underneath you, you can now rebase on `pr-branch-n`
+        3. If you made changes to the branched `binarymist/pr-branch-n` branch and `pr-branch-n` has changed underneath you, you can now rebase on `pr-branch-n`
         4. Once you have finished making changes to `binarymist/pr-branch-n` and you have rebased (if you needed to) to your up to date `pr-branch-n` branch, switch to `pr-branch-n` and merge `binarymist/pr-branch-n`
         5. When you're ready, you can push the `pr-branch-n` branch:
            ```
