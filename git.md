@@ -98,7 +98,7 @@ This allows you to compare just about anythng.
   `git branch --delete --remotes <remote>/<branch>`  
   or  
   `git branch -dr <remote>/branch>`
-* A better way is to just fetch the PR branch you need:
+* A better way is to just fetch the PR branch you need: <div id=just-fetch-pr-branch>
   1. Fetch the reference to the pull request based on its _id_ number, creating a new branch (`pr-branch-n` in this example) in the process:
     
      ```
