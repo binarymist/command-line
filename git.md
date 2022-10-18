@@ -132,10 +132,21 @@ This allows you to compare just about anythng.
            
         3. If you made changes to the branched `binarymist/pr-branch-n` branch and `pr-branch-n` has changed underneath you, you can now rebase on `pr-branch-n`
         4. Once you have finished making changes to `binarymist/pr-branch-n` and you have rebased (if you needed to) to your up to date `pr-branch-n` branch, switch to `pr-branch-n` and merge `binarymist/pr-branch-n`
-        5. When you're ready, you can push the `pr-branch-n` branch:
+        5. When you're ready, you can merge the `binarymist/pr-branch-n` branch to `pr-branch-n` branch. From the `pr-branch-n` branch:
            ```
-           git push origin <pr-branch-n>
+           git merge <binarymist/pr-branch-n>
            ```
+        6. From the remote branch that the Pull Request is based on:
+           ```
+           git merge <pr-branch-n>
+           ```           
+        7. Push your commit:
+           ```
+           git push origin <remote-branch-that-the-Pull-Request-is-based-on>
+           ```
+        7. Delete working branches
+           
+ 
 
 ## Git Workflows
 
