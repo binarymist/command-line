@@ -102,6 +102,16 @@ Useful resources:
 * [http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html](http://notesofaprogrammer.blogspot.co.nz/2013/10/join-multiple-video-files.html)
 * [https://libav.org/avconv.html#Tips](https://libav.org/avconv.html#Tips)
 
+On Linux Mint 21, the above doesn't work. Instead:
+
+With your mp4 files, these could be losslessly concatenated by first transcoding them to MPEG-2 transport streams. With H.264 video and AAC audio, the following can be used:
+
+```shell
+ffmpeg -i input1.mp4 -c copy intermediate1.ts
+ffmpeg -i input2.mp4 -c copy intermediate2.ts
+ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy output.mp4
+```
+
 #### Concatenating mov files:
 
 Once you have the files you would like to concatenate, create a file (let's call it `files_to_combine`) and add the files you want concatenated to it. The file should like similar to the following:
